@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Favicon -->
+    <!--
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+    -->
+    <link rel="shortcut icon" href="./sigmanode.png" type="image/png" />
+
+
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    
+    <!-- Title -->
+    <title>Digital Compositing - Open Pipeline</title>
+    <meta content="Digital Compositing"
+                name="description">
+    <meta content="digital compositing, digital compositing photo, node-based photo editor, node-based photo, digital compositing photo editor"
+                name="keywords">
+                
+                
+  </head>
+  <body>
+
+
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+    
+        <!-- Brand -->
+        <a class="navbar-brand" href="./index.html">
+            <!--
+          <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
+            <img src="./images/sigmanode.png"  class="navbar-brand-img"  />
+            -->
+            Photo Reality AR
+        </a>
+        
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+    
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+    
+          <!-- Navigation -->
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Open-Source
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+                <div class="row gx-0">
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                          Photo
+                        </h6>
+    
+                        <!-- List -->
+                        <a class="dropdown-item" href="./photocurves.html">
+                          Photo Curves
+                        </a>
+                        <a class="dropdown-item" href="./photoshaders.html">
+                          Photo Shaders
+                        </a>
+    
+                        <a class="dropdown-item mb-5" href="./photodraw.html">
+                          Photo Draw
+                        </a>
+
+    
+                      </div>
+             
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                          Digital Compositing
+                        </h6>
+    
+                        <!-- List -->
+  
+
+                        <a class="dropdown-item mb-5" href="./digitalcompositing.html">
+                          Open Pipeline
+                        </a>
+    
+                        <h6 class="dropdown-header">
+                          Download
+                        </h6>
+
+                        <!-- List -->
+                        <a class="dropdown-item" href="./download.html">
+                          Mac or iOS
+                        </a>
+                    
+                      </div>
+               
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Filters & Effects
+              </a>
+              <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+                <div class="list-group list-group-flush">
+                  <a class="list-group-item" href="photofilters.html">
+    
+                    <!-- Icon -->
+                    <!--
+                    <div class="icon icon-sm text-primary">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z" fill="#335EEA" opacity=".3"/><path d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z" fill="#335EEA"/><rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2" rx="1"/><rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2" rx="1"/></g></svg>                </div>
+                    -->
+                    <div class="icon icon-sm text-primary">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"/><path d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z" fill="#335EEA" opacity=".3"/></g></svg>                </div>
+
+                    <!-- Content -->
+                    <div class="ms-4">
+    
+                      <!-- Heading -->
+                      <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        Photo Filters
+                      </h6>
+    
+                      <!-- Text -->
+                      <p class="fs-sm text-gray-700 mb-0">
+                        Full list of Filters
+                      </p>
+                    </div>
+        
+    
+                  </a>
+                  <a class="list-group-item" href="photoeffects.html">
+    
+                    <!-- Icon -->
+                    <div class="icon icon-sm text-primary">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"/><path d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z" fill="#335EEA" opacity=".3"/></g></svg>                </div>
+    
+                    <div class="ms-4">
+                        <!-- Heading -->
+                        <h6 class="fw-bold text-uppercase text-primary mb-0">
+                            Photo Effects
+                        </h6>
+
+                        <!-- Text -->
+                        <p class="fs-sm text-gray-700 mb-0">
+                        Full list of Shader Effects
+                        </p>
+
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          
+          <a  class="navbar-btn btn btn-sm btn-info lift ms-auto" href="gallery.html">
+              Gallery
+          </a>
+         
+ 
+        </div>
+    
+      </div>
+    </nav>
+
+    <section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
+          <div class="container text-white">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+
+                <!-- Heading -->
+                <h1 class="display-4">
+                    100 Days of Photo Editing by Digital Compositing on iPhone
+                </h1>
+                <p>
+                This is a 100 days series that explores the use of Digital Compositing for Photo Editing and Photo Post-Processing.
+                </p>
+
+                
+                <h3 class="fw-bold">Why bother?</h3>
+                <p>
+                When using software for photo or image post-processing, tools such as PhotoShop or LightRoom immediately comes into mind. These are indeed useful tools that many professionals are familiar with. There are also many tutorials, articles, and videos, available on the internet, that discuss how to perform the different image editing tasks. Why then do we bother to use a different concept, Digital Compositing, for a discussion on Photo Editing?
+                </p>
+                <p>
+                The short answer to this:
+                </p>
+           
+                <blockquote class="blockquote mb-4">
+                              <p class="fs-lg mb-0 text-center text-muted">
+                              <i>
+                                “The ability to express what we want to do Succintly”
+                                </i>
+                              </p>
+                </blockquote>
+   
+                <p>
+                The above statement has a significant impact on the design on graphical or image post-processing software.
+                </p>
+
+                
+                <h3 class="fw-bold">Background</h3>
+                <p>
+                Many popular image post-processing tools uses the concept of Layering for performing image editing tasks. Different layers are used to separate the different elements of an image with each element placed over or under to create a final desired output. On the other end of the spectrum, it is interesting to note, that in movie post-production, there are two classed of programs: those that are Node based (Digital Compositing) and those that are Layer based.
+                </p>
+                <p>
+                There are various comparisons being made. From <a href="http://www.diva-portal.org/smash/get/diva2:327273/fulltext02#:~:text=Layer%20based%20software%20works%20on,an%20image%20of%20a%20spruce." rel="nofollow">
+                <span class="text-primary-desat">
+                    a research paper here
+                </span>
+                </a>, at
+                <a href="https://www.videomaker.com/article/c3/17836-nodes-vs-layers/" rel="nofollow">
+                <span class="text-primary-desat">
+                    Video Maker
+                </span>
+                </a>, and by
+                <a href="https://www.theinsidetips.com/tip-615-node-vs-layer-compositing/"rel="nofollow">
+                <span class="text-primary-desat">
+                    The Inside Tips
+                </span>
+                </a>.
+                </p>
+                <p>
+                In the next 100 articles (days), I hope to discuss on various topics of image post-processing. And in the process, hope to present an alternative, the use of Digital Compositing, for photo editing, filters, effects, animation, and eventually Augmented Reality.
+                </p>
+
+                <h3 class="fw-bold">Digital Compositing</h3>
+                <p>
+                Digital Compositing (node-based) is the process of combining multiple seemingly simple nodes to render and achieve a desired result. The paradigm of a node-based tool involves linking basic media objects onto a procedural map or node graph and then intuitively laying out each of the steps in a sequential progression of inputs and outputs. Any parameters from an earlier step can be modified to change the outcome, with the results instantly being visible to you, and each of the nodes, being procedural, can be easily reused, saving time and effort.
+                </p>
+                
+                <div style="border:1px solid gray">
+                   <pre style="overflow:auto; word-wrap:normal; white-space:pre;font-family: monospace;font-size:12px;margin-left:10px;margin-right:10px">
+
+                Read photo
+                |
+                V
+                Photo Curve (or Tone Curve)
+                |
+                V
+                Retouch
+                |
+                V
+                Gaussian Blur
+                |
+                V
+             Viewer
+                   </pre>
+                </div>
+                               
+<p></p>
+       <p>
+       To expand it further, if we need to merge images to achieve a particular effect, we can express it in a node graph as below:
+       </p>
+<div style="border:1px solid gray">
+   <pre style="overflow:auto; word-wrap:normal; white-space:pre;font-family: monospace;font-size:12px;margin-left:10px;margin-right:10px">
+
+                 Read photo  Read photo
+                 |           |
+                 V           V
+                 Exposure    Color Correction
+                 |           |
+                 |           V
+                 |           Retouch
+                 |           |
+                 |           V
+                 |           Gaussian Blur
+                 |           |
+                 V           V
+                     Merge
+                       |
+                       V
+                     Viewer
+   </pre>
+</div>
+               
+            <p></p>
+            <h3 class="fw-bold">Digital Compositing Pipeline</h3>
+            <p>
+            A node graph can be expressed easily graphically. This presents a difficulty, the steps will need to be drawn out in a node graph, in expressing on how we can achieve something. The interesting thing about node graph is it can be expressed as a list of steps in English succintly. For example, the node graph above can be expressed as a list of steps below:
+            </p>
+
+<div style="border:1px solid gray">
+   <pre style="overflow:auto; word-wrap:normal; white-space:pre;font-family: monospace;font-size:12px;margin-left:10px;margin-right:10px">
+       
+                1. Read photo
+                2. Exposure         (1)
+
+                3. Read photo
+                4. Color Correction (3)
+                5. Retouch          (4)
+                6. Gaussian Blur    (5)
+
+                7. Merge            (2,6)
+                8. Viewer           (7)
+                Note - The brackets e.g. "(1)" refers to the input node or image.
+   </pre>
+</div>
+<p></p>
+<p>
+A list of steps is both easy to create and easy to understand. It is also a succint medium that we can conveniently typed into a document or used it for discussion in a book. It can also be displayed easily on a device with a limited screen space such a mobile phone.
+
+</p>
+<h3 class="fw-bold">Find out more</h3>
+
+
+
+<ul class="list-unstyled mb-7">
+              <li class="d-flex">
+
+                <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>Background:&nbsp;
+                <a href=https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodeBasedCompositingOnMobile.md>
+                <p class="text-primary-desat">
+                Digital Compositing on Mobile
+                </p>
+                </a>
+
+              </li>
+              <li class="d-flex">
+
+                <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+                <a href=https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/NodePipeline.md>
+                <p class="text-primary-desat">
+                Digital Compositing Pipeline
+                </p>
+                </a>
+
+              </li>
+              <li class="d-flex">
+
+                <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+                <a href=https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/AutoChaining.md>
+                <p class="text-primary-desat">
+                Auto Chaining
+                </p>
+                </a>
+
+              </li>
+              
+              <li class="d-flex">
+
+                <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+                <a href=https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/ReverseCompositing.md>
+                <p class="text-primary-desat">
+                Reverse Compositing
+                </p>
+                </a>
+
+              </li>
+              
+              <li class="d-flex">
+
+                <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+                <a href=https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/ViewerCycling.md>
+                <p class="text-primary-desat">
+                Viewer Cycling
+                </p>
+                </a>
+
+              </li>
+              
+              <li class="d-flex">
+
+                <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                  <i class="fe fe-check"></i>
+                </div>
+                <a href=https://github.com/Misfits-Rebels-Outcasts/Nodef/blob/main/documentation/DirectedAcyclicGraphGeneration.md>
+                <p class="text-primary-desat">
+                Directed Acyclic GraphGeneration
+                </p>
+                </a>
+
+              </li>
+              
+</ul>
+
+<p>
+<a href="https://github.com/Misfits-Rebels-Outcasts/Nodef" class="btn btn-info lift" rel="nofollow">
+    Nodef Pipeline <i class="fe fe-arrow-right ms-2"></i>
+</a>
+&nbsp;
+<a href="https://github.com/Misfits-Rebels-Outcasts/ShaderMuse" class="btn btn-info lift" rel="nofollow">
+    ShaderMuse <i class="fe fe-arrow-right ms-2"></i>
+</a>
+</p>
+
+<p>
+</p>
+
+          
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .container -->
+        </section>
+
+    <!--
+    <section class="pt-6 pt-md-8">
+    -->
+
+    <!-- BORDER -->
+    <div class="bg-black">
+      <div class="container border-top border-gray-900-50"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-8 py-md-11 bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+    
+        <!--
+            <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
+    
+
+            <p class="text-gray-700 mb-2">
+              A better way to build.
+            </p>
+	    -->
+            <!--
+            <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+            </ul>
+	    -->
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    
+ 
+    
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    
+  
+    
+          </div>
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+    
+    
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    <!--
+      
+            <h6 class="fw-bold text-uppercase text-gray-700">
+              Legal
+            </h6>
+    
+       
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+            </ul>
+    -->
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+  </body>
+</html>
