@@ -6,7 +6,7 @@ https://photorealityar.com
 
 Website Theme
 
-This website uses the following commercial web theme:
+This website uses the following COMMERCIAL web theme:
 
 https://landkit.goodthemes.co
 
