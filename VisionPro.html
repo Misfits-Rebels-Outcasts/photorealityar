@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Favicon -->
+    <!--
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+    -->
+    <link rel="shortcut icon" href="./photo.ico" type="image/x-icon" />
+
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    
+    <!-- Title -->
+    
+    <title>Photo Reality AR - Photo Editor for Augmented Reality</title>
+    <meta content="Photo Editor for Augmented Reality (AR)"
+                name="description">
+    <meta content="photo editor, augmented reality, ar photo, photo filters, photo effects"
+                name="keywords">
+                
+  </head>
+  <body>
+
+
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+    
+        <!-- Brand -->
+        <a class="navbar-brand" href="./index.html">
+            <!--
+          <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
+            <img src="./images/sigmanode.png"  class="navbar-brand-img"  />
+            -->
+            Photo Reality
+        </a>
+        
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+    
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+    
+          <!-- Navigation -->
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Photo
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+                <div class="row gx-0">
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                          Photo
+                        </h6>
+    
+                        <a class="dropdown-item" href="./photocurves.html">
+                          Photo Curves
+                        </a>
+                        <a class="dropdown-item" href="./photoshaders.html">
+                          Photo Shaders
+                        </a>
+    
+                        <a class="dropdown-item mb-5" href="../photodraw.html">
+                          Photo Draw
+                        </a>
+
+    
+                      </div>
+             
+                    </div>
+                  </div>
+                  
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+                        <h6 class="dropdown-header">
+                          Digital Compositing
+                        </h6>
+    
+                        <a class="dropdown-item mb-5" href="./digitalcompositing.html">
+                          100 Days of Photo Editing
+                        </a>
+    
+                      </div>
+               
+                    </div>
+                  </div>
+                  
+                </div>
+              </div> <!-- / .row -->
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Augmented Reality
+              </a>
+              <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+                <div class="list-group list-group-flush">
+                  <a class="list-group-item" href="./realitykit_terrainshader_surfaceshader_geometrymodifier.html">
+    
+                    <div class="icon icon-sm text-primary">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#335EEA" opacity=".3" d="M6 4h12l2 2.5H4z"></path><path d="M5 6h14a2 2 0 012 2v9a2 2 0 01-2 2h-3c-1 0-1.5-2-4-2s-2.5 2-4 2H5a2 2 0 01-2-2V8a2 2 0 012-2zm3 8a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"></path></g></svg>
+                    </div>
+ 
+                    <div class="ms-4">
+    
+                      <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        Spatial Computing
+                      </h6>
+    
+                      <p class="fs-sm text-gray-700 mb-0">
+                        RealityKit Terrain Shader
+                      </p>
+                    </div>
+        
+    
+                  </a>
+             
+                </div>
+              </div>
+            </li>
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Filters & Effects
+              </a>
+              <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+                <div class="list-group list-group-flush">
+                  <a class="list-group-item" href="./photofilters.html">
+    
+                    <div class="icon icon-sm text-primary">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"/><path d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z" fill="#335EEA" opacity=".3"/></g></svg>                </div>
+
+                    <!-- Content -->
+                    <div class="ms-4">
+    
+                      <!-- Heading -->
+                      <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        Photo Filters
+                      </h6>
+    
+                      <!-- Text -->
+                      <p class="fs-sm text-gray-700 mb-0">
+                        Full list of Filters
+                      </p>
+                    </div>
+        
+    
+                  </a>
+                  <a class="list-group-item" href="./photoeffects.html">
+    
+                    <!-- Icon -->
+                    <div class="icon icon-sm text-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M11 10.417V4a1 1 0 012 0v6.317l5.385-3.109a1 1 0 011 1.732l-5.47 3.16 5.385 3.108a1 1 0 01-1 1.732L13 13.88V20a1 1 0 01-2 0v-6.218L5.529 16.94a1 1 0 11-1-1.732L9.914 12.1 4.444 8.94a1 1 0 011-1.732L11 10.417z" fill="#335EEA" opacity=".3"></path><path d="M7.858 9.78a1 1 0 01-.666 1.348l-1.931.517a1 1 0 01-.518-1.932l1.932-.517a1.01 1.01 0 01.128-.026 1.01 1.01 0 01-.042-.123l-.518-1.932a1 1 0 111.932-.517l.518 1.931a1 1 0 01-.835 1.25zm9.168 5.293c.016.04.03.08.041.123l.518 1.931a1 1 0 01-1.932.518l-.517-1.932a1 1 0 01.834-1.25 1 1 0 01.666-1.348l1.931-.517a1 1 0 11.518 1.931l-1.932.518a1.01 1.01 0 01-.127.026zM15.97 9.78a1 1 0 01-.834-1.25l.517-1.932a1 1 0 011.932.517l-.518 1.932a1.01 1.01 0 01-.041.123c.042.006.085.014.127.026l1.932.517a1 1 0 01-.518 1.932l-1.931-.518a1 1 0 01-.666-1.347zm-9.167 5.293a1.01 1.01 0 01-.128-.026l-1.932-.518a1 1 0 11.518-1.931l1.932.517a1 1 0 01.665 1.348 1 1 0 01.834 1.25l-.517 1.932a1 1 0 11-1.932-.518l.518-1.931a1.01 1.01 0 01.042-.123zm5.111-7.635a1 1 0 01-1.5.098L9 6.12a1 1 0 111.414-1.414l1.414 1.414c.031.031.06.064.086.098A1.01 1.01 0 0112 6.12l1.414-1.414a1 1 0 111.414 1.414l-1.414 1.415a1 1 0 01-1.5-.098zm0 10.586a1.01 1.01 0 01-.086.097l-1.414 1.415A1 1 0 019 18.12l1.414-1.414a1 1 0 011.5.098 1 1 0 011.5-.098l1.414 1.414a1 1 0 01-1.414 1.415L12 18.12a1.01 1.01 0 01-.086-.097z" fill="#335EEA" opacity=".3"></path></g></svg>
+                    </div>
+    
+                    <div class="ms-4">
+                        <!-- Heading -->
+                        <h6 class="fw-bold text-uppercase text-primary mb-0">
+                            Photo Effects
+                        </h6>
+
+                        <!-- Text -->
+                        <p class="fs-sm text-gray-700 mb-0">
+                        Full list of Shader Effects
+                        </p>
+
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                 Pipeline
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+                <div class="row gx-0">
+                    
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+       
+       <!--
+                        <h6 class="dropdown-header">
+                          Digital Compositing
+                        </h6>
+    
+   
+                        <a class="dropdown-item mb-5" href="./digitalcompositing.html">
+                          Open ^Graphics Pipeline
+                        </a>
+       -->
+                        <h6 class="dropdown-header">
+                          Open ^Graphics Pipeline
+                        </h6>
+    
+                        <a class="dropdown-item mb-5" href="./Reduce-Cognitive-Overload-In-Graphics-Software.pdf">
+                          Reduce Cognitive Overload (PDF)
+                        </a>
+
+    
+                        <h6 class="dropdown-header">
+                          Download
+                        </h6>
+
+                        <!-- List -->
+                        <a class="dropdown-item" href="./download.html">
+                          xrOS, MacOS, or iOS
+                        </a>
+                    
+                      </div>
+               
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+            </li>
+            
+
+          </ul>
+          
+          <a  class="navbar-btn btn btn-sm btn-info lift ms-auto" href="./gallery.html">
+              Gallery
+          </a>
+         
+ 
+        </div>
+    
+      </div>
+    </nav>
+    
+    <!-- WELCOME -->
+<section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 text-center">
+
+        <!-- Headin -->
+        <h1 class="display-1 fw-bold text-white" data-aos="fade-up" data-aos-delay="50">
+          Reality VFX & Puppetry
+        </h1>
+
+        <!-- Text -->
+        <p class="lead text-gray-500 mb-6 mx-auto" data-aos="fade-up" data-aos-delay="100" style="max-width: 500px;">
+      
+        
+        photoReality is a 3D scene pipeline production tool that uses Augmented Reality for creating Visual Effects and Motion Capture for Character Puppetry.
+        
+
+        </p>
+
+        <!-- Button -->
+        <!--
+        <p class="mb-7 mb-md-9" data-aos="fade-up" data-aos-delay="150">
+          <a class="btn btn-info shadow lift" href="#!">
+            Get it now <i class="fe fe-arrow-right ms-3"></i>
+          </a>
+        </p>
+        -->
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+        
+        <!--
+      <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="position-relative pt-7 pb-7 ps-7 mb-7 mb-md-9 rounded-4 shadow-multicolor overflow-hidden">
+
+          <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-gradient-multicolor"></div>
+          <img class="position-relative img-fluid rounded-start shadow-lg" src="images/augmented_reality_photo_ar_small.png" alt="..." />
+        </div>
+
+      </div>
+        -->
+        <figure class="figure mb-7">
+            
+                <img class="figure-img img-fluid rounded lift lift-lg" src="ar/realitykitshaders/realitykit_terrain_shader.gif" alt="surface shaders">
+                <p>
+                <figcaption class="figure-caption text-center">
+                    Terrain Shader
+                </figcaption>
+                </p>
+                <p>&nbsp;</p>
+                
+                <img class="figure-img img-fluid rounded lift lift-lg" src="videos/surfaceshaders_geometrymodifiers.gif" alt="surface shaders" >
+                    
+
+         <!--
+         <td>
+             <img class="figure-img img-fluid rounded lift lift-lg" src="videos/surfaceshaders_geometrymodifiers.gif" alt="surface shaders" >
+         </td>
+-->
+          <figcaption class="figure-caption text-center">
+              <a href="realitykit_terrainshader_surfaceshader_geometrymodifier.html">
+            Custom Materials - Surface Shaders & Geometry Modifiers
+            </a>
+          </figcaption>
+        </figure>
+
+        
+        
+        <!-- Image -->
+        <!--
+        <img src="images/augmentedrealityphoto_ar.png" alt="..." />
+
+        <img class="position-relative img-fluid rounded-start shadow-lg" src="assets/img/screenshots/desktop/dashkit-alt.jpg" alt="..." />
+        -->
+        <!--
+        <img class="position-relative img-fluid rounded-start shadow-lg" src="images/augmented_reality_photo_ar.png" alt="..." />
+        <img class="position-relative" src="images/augmented_reality_photo_ar.png" alt="..." />
+        -->
+
+        <!--
+      <img src="images/augmented_reality_photo_ar.png" alt="..." />
+        -->
+    </div> <!-- / .row -->
+
+  </div> <!-- / .container -->
+</section>
+
+<!-- SHAPE -->
+<div class="position-relative">
+  <div class="shape shape-bottom shape-fluid-x text-dark">
+    <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>      </div>
+</div>
+
+<!-- ABOUT -->
+<section class="pt-8 pt-md-11 bg-black">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-12 col-md-6 col-lg-5">
+
+        <!-- Heading -->
+        <h2 class="display-3 fw-bold text-white mb-6 mb-md-8">
+            Node-based
+        </h2>
+
+        <!-- Text -->
+        <p class="text-muted lead mb-6">
+          <span class="text-white fw-bold">Digital Compositing.</span> photoReality uses a digital compositing workflow, node-based instead of layer-based, to lay out the progression of combining multiple images to a final output image. Digital Compositing allows great flexibility, including the ability to modify an earlier image step while viewing the final composite.
+        </p>
+
+        <!-- Text -->
+        <!--
+        <p class="text-muted lead mb-6">
+          <span class="text-white fw-bold">Flexibility.</span> Digital Compositing allows great flexibility, including the ability to modify an earlier image step while viewing the final composite.
+        </p>
+-->
+        <p class="text-muted lead mb-7 mb-md-0">
+          <span class="text-white fw-bold">Steps Pipeline.</span> photoReality displays a digital compositing node graph as a list of instructional steps, the Steps Pipeline, with modern concepts of Auto Chaining, Viewer Cycling, References, and Reverse Compositing.
+        </p>
+        
+      </div>
+      <div class="col-12 col-md-6">
+
+        <!-- Media -->
+        <div class="position-relative vw-md-50 pt-7 ps-7 ps-md-9 overflow-hidden" style="max-width: 800px;">
+
+          <!-- Background -->
+          <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-gradient-multicolor rounded-4"></div>
+
+          <!-- Image -->
+          <!--
+          <img class="position-relative w-100 w-md-150" src="assets/img/screenshots/desktop/dashkit-alt-mixed-cropped.png" alt="...">
+          -->
+          <img class="position-relative w-100 w-md-150" src="images/photoeditor.png" alt="...">
+
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="pt-8 pt-md-11 bg-black">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-12 col-md-6 col-lg-5 order-md-1">
+
+        <!-- Heading -->
+        <h2 class="display-4 fw-bold text-white mb-6 mb-md-8">
+            Shader Effects
+        </h2>
+
+        <!-- Text -->
+        <p class="text-muted lead mb-6">
+          <span class="text-white fw-bold">GPU.</span> photoReality uses hardware-accelerated graphics running on the Graphics Processing Unit (GPU) whenever possible to render high-resolution graphics in less time using shaders.
+        </p>
+        
+        <p class="text-muted lead  mb-6">
+          <span class="text-white fw-bold">Effects.</span> Add shader effects such as smoke, water, fire, and particles to your photo; mix the shaders with over 100 of filters.
+        </p>
+        
+        <!-- Text -->
+        <p class="text-muted lead mb-7 mb-md-0">
+          <span class="text-white fw-bold">Shaders.</span> A Shader is a set of computer instructions that is executed on the GPU that affects the light, darkness, and color etc. of an image.
+        </p>
+
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 order-md-0">
+
+        <!-- Positioner -->
+        <div class="position-relative">
+
+          <!-- Media -->
+          <div class="position-relative vw-md-50 p-7 p-md-9 ps-0 overflow-hidden float-end" style="max-width: 800px;">
+
+            <!-- Background -->
+            <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-gradient-multicolor rounded-4"></div>
+
+            <!-- Image -->
+            <!--
+            <img class="position-relative w-100 w-md-120 float-end" src="assets/img/screenshots/ui/landkit-figma.png" alt="...">
+            -->
+            <img class="position-relative w-100 w-md-120 float-end" src="images/SinusoidalNoise.gif" alt="...">
+
+            
+          </div>
+
+          <!-- Icon -->
+          <!--
+          <img class="img-fluid position-absolute top-0 end-0 mt-n5 me-n5" src="assets/img/icons/figma-dark-circle.png" alt="...">
+          -->
+
+        </div>
+
+      </div>
+    </div>
+<!-- / .row -->
+  </div>
+</section>
+
+
+
+<!-- IMAGE -->
+<!--
+<section class="py-14 py-lg-16 jarallax" data-jarallax data-speed=".8" style="background-image: url(assets/img/covers/cover-19.jpg);">
+
+  <div class="shape shape-top shape-fluid-x text-black">
+    <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h2880v125h-720L720 250H0V0z" fill="currentColor"/></svg>      </div>
+
+
+  <div class="shape shape-bottom shape-fluid-x text-black">
+    <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M720 125L2160 0h720v250H0V125h720z" fill="currentColor"/></svg>      </div>
+
+</section>
+-->
+<!-- CTA -->
+<section class="py-10 py-md-14 bg-black">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <h6 class="text-uppercase text-info mb-6">
+             A Satire in Hackernoon
+          </h6>
+          <a href="https://hackernoon.com/revolutionary-user-interface-design-tackling-cognitive-overload-in-graphics-software" rel="nofollow">
+          <figure class="figure mb-7">
+
+            <img class="figure-img img-fluid rounded lift lift-lg" src="external/HackerNoon Rounded Horizontal.png" alt="hackernoon" width="50%" height=-"50%">
+
+          </figure>
+          
+
+          <h1 class="display-1 fw-bold text-white">
+              Tackling Cognitive Overload in Graphics Software
+          </h1>
+          </a>
+          
+    
+          </p>
+          <p>&nbsp;</p>
+    
+          <p>&nbsp;</p>
+
+        <!-- Pretitle -->
+        <h6 class="text-uppercase text-info mb-6">
+          It's the age of Augmented Reality
+        </h6>
+
+        <!-- Heading -->
+        <h1 class="display-1 fw-bold text-white">
+            Photo Realistic Augmented Reality
+        </h1>
+
+        <!-- Text -->
+        <!--
+        <p class="fs-lg text-gray-500 mb-6 mb-md-8">
+        Focus on your photo and let us handle all your Photo Editing capabilities, including Augmented Reality.
+        </p>
+        -->
+
+        <p  class="mb-6 mb-md-8">
+        <figure class="figure mb-7">
+
+          <!-- Image -->
+          <!--
+          <img class="figure-img img-fluid rounded lift lift-lg" src="videos/surfaceshaders_geometrymodifiers.gif" alt="surface shaders">
+          -->
+              <img class="figure-img img-fluid rounded lift lift-lg" src="images/PhotoReality.png" alt="...">
+                  
+          <!-- Caption -->
+          <figcaption class="figure-caption text-center">
+            xrOS - Photo Curves in AR
+          </figcaption>
+
+        </figure>
+
+
+            
+        <!--
+        <video width="512" height="256" controls>
+              <source src="videos/surfaceshader.mp4" type=video/mp4>
+            </video>
+        -->
+        </p>
+        <p  class="mb-6 mb-md-8">
+        <figure class="figure mb-7">
+        <img class="figure-img img-fluid rounded lift lift-lg" src="images/MalaccaFire.gif" alt="surface shaders" width="60%" height="60%">
+        <figcaption class="figure-caption text-center">
+              Metal Shader - Fire Effects
+        </figcaption>
+
+        </figure>
+        </p>
+<!--
+        <h2 class="display-3 fw-bold text-white  mb-6 mb-md-8">
+           Open-Source
+        </h2>
+        <p>
+        
+        <a href="download.html" class="btn btn-info lift">
+          Download Alpha<i class="fe fe-arrow-right ms-2"></i>
+        </a>
+        </p>
+-->
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- FEATURES -->
+<section class="bg-gradient-dark-black py-8 py-md-11">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-7 text-center">
+
+        <!-- Heading -->
+        <h2 class="display-3 fw-bold text-white">
+          Open-source photo editing capabilities.
+        </h2>
+
+        <!-- Text -->
+        <p class="lead text-muted mb-9">
+        We are building all the necessary photo editing and image post-processing capabilities you'll need by components.
+          Please check out our open-source projects in GitHub.
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row mt-n7">
+      <div class="col-12 col-sm-6 col-lg-4 mt-7">
+
+        <!-- Card -->
+        <div class="card h-100 bg-dark rounded-3">
+
+          <div class="card-body p-5 pb-0 my-auto">
+
+            <!-- Image -->
+            <!--
+            <img class="img-fluid" src="assets/img/illustrations/illustration-1-dark.png" alt="..." style="max-width: 150px;">
+            -->
+
+<div  class="icon d-inline-flex p-3 rounded-circle bg-info text-white">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M13 9V6c-3.954 1.488-6.211 2.994-8 7h3c.743-.8 1.989-3 5-4z" fill="#335EEA" opacity=".3"></path><circle fill="#335EEA" cx="18" cy="7.5" r="3"></circle><circle fill="#335EEA" cx="6" cy="18" r="3"></circle></g></svg>
+ </div>
+          </div>
+          <div class="card-body p-5">
+
+            <!-- Heading -->
+            <a href="photocurves.html">
+
+            <h3 class="fw-bold text-white">
+                Photo Curves - new!
+            </h3>
+            </a>
+
+            <!-- Text -->
+            <p class="text-muted mb-0">
+              Adjust your photos with a RGB or HSV photo tone curve to lighten, or decrease the contrast of your image.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mt-7">
+          <!-- Card -->
+
+          <div class="card h-100 bg-dark rounded-3">
+            <div class="card-body p-5 pb-0 my-auto">
+
+  
+              <div class="row gx-0" style="max-width: 150px;">
+                <div class="col-4">
+
+                  <img class="w-150 rounded-1" src="assets/img/portfolio/portfolio-3.jpg" alt="...">
+
+                </div>
+                <div class="col-4">
+
+   
+                  <img class="w-150 mt-3 rounded-1" src="assets/img/portfolio/portfolio-2.jpg" alt="...">
+
+                </div>
+                <div class="col-4">
+
+   
+                  <img class="w-150 mt-5 rounded-1" src="assets/img/portfolio/portfolio-1.jpg" alt="...">
+
+                </div>
+              </div>
+
+            </div>
+            <div class="card-body p-5">
+
+                <a href="photofilters.html">
+
+              <h3 class="fw-bold text-white">
+                Photo Filters
+              </h3>
+                </a>
+
+
+              <p class="text-muted mb-0">
+                Apply, mix, and blend a huge collection of photo filters on your photo.
+              </p>
+
+            </div>
+          </div>
+          
+
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 mt-7">
+
+          <div class="card h-100 bg-dark rounded-3">
+            <div class="card-body p-5 pb-0 my-auto">
+                <div class="icon d-inline-flex p-3 rounded-circle bg-info text-white">
+
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M18.5 8a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm0 13a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm-13 0a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="#335EEA" opacity=".3"></path><path d="M5.5 8a2.5 2.5 0 110-5 2.5 2.5 0 010 5zM11 4h2a1 1 0 010 2h-2a1 1 0 010-2zm0 14h2a1 1 0 010 2h-2a1 1 0 010-2zm-6-8a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1z" fill="#335EEA"></path></g></svg>
+                </div>
+
+            </div>
+            <div class="card-body p-5">
+
+                <a href="photodraw.html">
+
+              <h3 class="fw-bold text-white">
+                WYSIWYG Draw
+              </h3>
+                </a>
+
+              <p class="text-muted mb-0">
+                A What-You-See-Is-What-You-Get (WYSIWYG) designer to easily adjust the photo to your needs. <br /><br /><br />
+              </p>
+
+            </div>
+          </div>
+
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 mt-7">
+         
+        <div class="card h-100 bg-dark rounded-3">
+          <div class="card-body p-5 pb-0 my-auto">
+
+              <div class="icon icon-xl">
+                  
+                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#335EEA" opacity=".3" d="M5 3h14l4 5H1z"></path><path fill="#335EEA" d="M23 8L12 20 1 8z"></path></g></svg>
+              </div>
+
+          </div>
+          <div class="card-body p-5">
+
+            <a href="realitykit_terrainshader_surfaceshader_geometrymodifier.html">
+            <h3 class="fw-bold text-white">
+              RealityKit Terrain Shaders - new!
+            </h3>
+            </a>
+
+
+            <p class="text-muted mb-0">
+            Create an AR Terrain with RealityKit Surface Shader and Geometry Modifier.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 mt-7">
+          <!-- Card -->
+          <div class="card h-100 bg-dark rounded-3">
+            <div class="card-body p-5 pb-0 my-auto">
+
+              <!-- Letter -->
+              <!--
+              <div class="lh-1 fw-bolder text-info" style="font-size: 100px;">Aa</div>
+              -->
+
+              <div class="card-body p-5 pb-0 my-auto">
+
+                <!-- Palette -->
+                <div class="d-inline-flex flex-row-reverse">
+                    <div class="p-6 rounded-circle bg-gradient-multicolor ms-n3"></div>
+                  <div class="p-6 rounded-circle bg-secondary ms-n3"></div>
+                  <div class="p-6 rounded-circle bg-primary"></div>
+                </div>
+
+              </div>
+              
+            </div>
+            <div class="card-body p-5">
+
+              <!-- Heading -->
+              <a href="photoeffects.html">
+
+              <h3 class="fw-bold text-white">
+                Photo Effects
+              </h3>
+              </a>
+
+              <!-- Text -->
+              <p class="text-muted mb-0">
+                Apply, mix, and blend a collection of photo shader effects such as smoke, water, and fire.
+              </p>
+
+            </div>
+          </div>
+
+
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 mt-7">
+<!--
+        <div class="card h-100 bg-dark rounded-3">
+          <div class="card-body p-5 pb-0 my-auto">
+
+
+            <div class="icon d-inline-flex p-3 rounded-circle bg-info text-white">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M4.953 14.303l-1.906-.606C4.65 8.644 7.673 6 12 6c4.327 0 7.349 2.644 8.953 7.697l-1.906.606C17.688 10.023 15.377 8 12 8s-5.688 2.022-7.047 6.303zM12 8a1 1 0 100-2 1 1 0 000 2z" fill="#335EEA" opacity=".3"/><path d="M5.732 6h3.439a3.001 3.001 0 015.658 0h3.439a2 2 0 110 2h-3.439a3.001 3.001 0 01-5.658 0H5.732a2 2 0 110-2zM12 8a1 1 0 100-2 1 1 0 000 2zM4 19a3 3 0 110-6 3 3 0 010 6zm0-2a1 1 0 100-2 1 1 0 000 2zm16 2a3 3 0 110-6 3 3 0 010 6zm0-2a1 1 0 100-2 1 1 0 000 2z" fill="#335EEA"/></g></svg>                </div>
+
+          </div>
+          <div class="card-body p-5">
+
+
+            <h3 class="fw-bold text-white">
+              WYSIWYG
+            </h3>
+
+            <p class="text-muted mb-0">
+              A What-You-See-Is-What-You-Get (WYSIWYG) designer to easily adjust the photo to your needs.
+            </p>
+
+          </div>
+        </div>
+      </div>
+-->
+
+    </div> <!-- / .row -->
+  </div>
+</section>
+
+    
+
+    <!--
+    <section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
+    <section class="bg-gradient-dark-black py-8 py-md-11">
+      <div class="container">
+    <section class="pt-6 pt-md-8">
+    -->
+
+    <!--
+    <section class="pt-6 pt-md-8">
+    -->
+
+    <!-- BORDER -->
+    <div class="bg-black">
+      <div class="container border-top border-gray-900-50"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-8 py-md-11 bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+    
+        <!--
+            <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
+    
+
+            <p class="text-gray-700 mb-2">
+              A better way to build.
+            </p>
+        -->
+            <!--
+            <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+            </ul>
+        -->
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    
+ 
+    
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    
+  
+    
+          </div>
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+    
+    
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    <!--
+      
+            <h6 class="fw-bold text-uppercase text-gray-700">
+              Legal
+            </h6>
+    
+       
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+            </ul>
+    -->
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+  </body>
+</html>
