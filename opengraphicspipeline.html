@@ -21,10 +21,10 @@
     
     <!-- Title -->
     
-    <title>ShaderMuse</title>
-    <meta content="ShaderMuse"
+    <title>Open Graphics Pipeline</title>
+    <meta content="Open Graphics Pipeline"
                 name="description">
-    <meta content="ShaderMuse, shaders, metal shaders"
+    <meta content="Open Pipeline, Open Graphics Pipeline, Instructional Design"
                 name="keywords">
                 
   </head>
@@ -296,53 +296,349 @@
     </nav>
     
         <section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
+
           <div class="container text-white">
             <div class="row justify-content-center">
               <div class="col-12 col-md-10 col-lg-9 col-xl-8">
 
-                <h1 class="display-4">
-                    Photo Shaders
-                </h1>
+                  <h1 class="display-4">
+                      Photo Curves
+                  </h1>
+                  <p>
+                  A photo taken from a digital camera may sometimes appear too dull or too bright. This is a situation where we could use a photo curve for photo post-processing to make our photos look dramatically better. Applying a curve to a photo can be thought of as a way of remapping an image's tonality, enabling us to adjust the brightness, increase contrast, or emphasize colors.
+                  </p>
+                  <p>
+                  Applying a curve to a photo can be thought of as a way of remapping an image tonality, enabling us to adjust brightness, increase contrast, or emphasize colors.
+                  </p>
 
-                <!-- Heading -->
                 <h3 class="fw-bold">
-                  Open-Source ShaderMuse Project
+                    Background
                 </h3>
                 <p>
-                
-                ShaderMuse explores the fun from Mixing, Chaining, and Digital Compositing Photo Images, Graphic Shaders (Apple Metal Shaders), and Image Filters (Core Image CIFilter). Beyond the fun, we explore the advantages of surfacing the properties of shaders and filters through a Digital Compositing Pipeline, enabling an end user such as a creative graphics designer to make changes to the node graph without programming.
-                
+                This article is part of a 100 days series that explores the use of <strong>Digital Compositing</strong> for Photo Editing and Photo Post-Processing.
                 </p>
-                <p>
-                <a href="https://github.com/Misfits-Rebels-Outcasts/ShaderMuse" class="btn btn-info lift" rel="nofollow">
-                  Github Project <i class="fe fe-arrow-right ms-2"></i>
-                </a>
-                </p>
-<p>
-                For example, we explore the fun of mixing this Image
-</p>
-<figure class="figure mb-7">
-    <img class="figure-img img-fluid rounded lift lift-lg" src="shaders/Malacca.JPG" alt="...">
-</figure>
-<p>
-                to get this Photo Fire Effects Video.
-<p>
-<figure class="figure mb-7">
-    <img class="figure-img img-fluid rounded lift lift-lg" src="shaders/MalaccaFire.gif" alt="...">
-                    
-</figure>
-                    
+                <h3 class="fw-bold">
+                Why bother?
+                </h3>
+                <blockquote class="blockquote mb-4">
+                              <p class="fs-lg mb-0 text-center text-muted">
+                              <i>
+                                “The ability to express what we want to do Succinctly”
+                                </i>
+                              </p>
+                </blockquote>
                 <!--
+                <p class="fs-lg text-gray-500 mb-6 mb-md-4 text-center">
+                Short answer: The ability to express what we want to do <strong>Succintly</strong>.
+                </p>
+                -->
+                <p>
+                Using Digital Compositing has a significant impact on many things including: the way we design graphics software, how we write articles to discuss image post-processing, and how it can help people quickly understand a graphical process. Find out more at the following:
+                </p>
+                
+                <a href="digitalcompositing.html">
+                <p class="text-primary-desat text-center">
+                Digital Compositing for Photo Editing on iPhone
+                </p>
+                </a>
+ 
+                
+                <h2 class="fw-bold">
+                  Photo Curve - RGB Tone Curve
+                </h2>
                 <figure class="figure mb-7">
 
-                  <img class="figure-img img-fluid rounded lift lift-lg" src="filters/darkphoto.png" alt="...">
+                  <!-- Image -->
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto.png" alt="...">
 
+                  <!-- Caption -->
                   <figcaption class="figure-caption text-center">
                     The open-source image used for applying the Photo Curve.
                   </figcaption>
 
                 </figure>
-                -->
+                <!-- Text -->
+                <p>
+                Every photo has a mix of shadows, mid tones, and highlights. Shadows are the darkest parts of the photo, highlights are the brightest, and mid tones are in between. When shown on a Photo Curve, the upper-right area of the graph represents the highlights, the lower-left area represents the shadows, and the middle part represents the mid tones.
+                </p>
+                <p>
+                The Photo Curve below shows a linear curve mapping all parts of the photo as it is, performing no adjustments to the photo. This means if we apply a linear Photo Curve to an image, we will be getting back the original image without any changes.
+                </p>
+                <figure class="figure mb-7">
+
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/linearphotocurve.jpeg" alt="...">
+
+                  <figcaption class="figure-caption text-center">
+                    Linear Photo Curve
+                  </figcaption>
+
+                </figure>
+                
+                <p>
+                A photo curve can be applied to all the RGB channels together in an image, or to each of the Red, Green, or Blue channel individually. We start by applying the curve on all the channels of a RGB photo.
+                </p>
+
+                <h2 class="fw-bold">
+                    Increase the darkness of a photo
+                </h2>
+                
+                 <p>
+                 As described earlier, the lower left of the Photo Curve of an RGB image represents the shadows, or darkness portion of our photo. By shifting the points on the lower left of a linear curve to the right, we can increase the darkness of the photo. This is shown below.
+                 </p>
+                 <figure class="figure mb-7">
+                   <img class="figure-img img-fluid rounded lift lift-lg" src="curves/increasedarknesscurve.jpg" alt="...">
+                   <figcaption class="figure-caption text-center">
+                       Tone Curve to increase the darkness
+                   </figcaption>
+                 </figure>
+                 <figure class="figure mb-7">
+                   <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto.png" alt="...">
+                       <figcaption class="figure-caption text-center">
+                           Original
+                       </figcaption>
+                 </figure>
+                 <figure class="figure mb-7">
+                   <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkenthedarkness.jpg" alt="...">
+                       <figcaption class="figure-caption text-center">
+                           After
+                       </figcaption>
+                 </figure>
+                 
+                 <h2 class="fw-bold">
+                     Lighten the shadows or darkness of a photo
+                 </h2>
+                 
+                  <p>
+                  The shadows or darkness of the photo can be lighten if we shift the lower left points of the Photo Curve up.
+                                    
+                  </p>
+                  <figure class="figure mb-7">
+                    <img class="figure-img img-fluid rounded lift lift-lg" src="curves/phototonecurvelighten.jpeg" alt="...">
+                    <figcaption class="figure-caption text-center">
+                        Tone Curve to Lighten the shadows
+                    </figcaption>
+                  </figure>
+                  
+                  <figure class="figure mb-7">
+                    <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto.png" alt="...">
+                        <figcaption class="figure-caption text-center">
+                            Original
+                        </figcaption>
+                  </figure>
+                  
+                  <figure class="figure mb-7">
+                    <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto_lightenphotocurve.jpg" alt="...">
+                        <figcaption class="figure-caption text-center">
+                            After
+                        </figcaption>
+                  </figure>
+                
+                <h2 class="fw-bold">
+                    Darken the highlights or brightness of a photo
+                </h2>
+                
+                <p>
+                On the other hand, the upper right of a curve represents the highlights or brightness of a photo. We can darken the highlights by shifting the points on the top right down as shown below.
+                </p>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkenbrightnesscurve.jpeg" alt="...">
+                  <figcaption class="figure-caption text-center">
+                      Tone Curve to Darken the highlights
+                  </figcaption>
+                </figure>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto.png" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          Original
+                      </figcaption>
+                </figure>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkenbrightness.jpg" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          After
+                      </figcaption>
+                </figure>
+                
+                
+                <h2 class="fw-bold">
+                    Decrease the contrast of a photo
+                </h2>
+                <p>
+                We can decrease the contrast of a photo by a curve shown below. We shifted point 1 up slightly while point 4 down slightly. This has the effect of increasing the darkness of shadows and reducing the brightness of highlights.
+                </p>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/decreasecontrast.jpeg" alt="...">
+                  <figcaption class="figure-caption text-center">
+                      Decrease Contrast Curve
+                  </figcaption>
+                </figure>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto.png" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          Original
+                      </figcaption>
+                </figure>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/decreasecontrast.jpg" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          After
+                      </figcaption>
+                </figure>
+                
+                
+                <h2 class="fw-bold">
+                    Posterize a Photo
+                </h2>
+                <p>
+                We can posterize a photo by reducing the number of colors with a curve shown below.
+                </p>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/posterizecurve.jpeg" alt="...">
+                  <figcaption class="figure-caption text-center">
+                      Posterize Curve
+                  </figcaption>
+                </figure>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto.png" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          Original
+                      </figcaption>
+                </figure>
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/posterize.jpg" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          After
+                      </figcaption>
+                </figure>
+                
+                
+                <h2 class="fw-bold">
+                    RGB Channels
+                </h2>
+                <p>
+                Besides applying a Photo Curve on all 3 color channels (RGB). We can also apply the curve on an individual channel such as the Red Channel. We will need to change the Channel Mode from "RGB - All" to "RGB". This enables us to select the channel to apply our curve to.
+                </p>
+                
+                <figure class="figure mb-7">
+
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/channelmode.jpeg" alt="...">
+
+                  <figcaption class="figure-caption text-center">
+                    Channel Mode
+                  </figcaption>
+
+                </figure>
+                
+                <p>
+                In "RGB" Channel Mode, after applying the curve to the individual channels: Red, Green, and Blue, we get back a final combined image of the three channels. This is useful in circumstances when we just want to change the color of a single channel without affecting others. Below, we raise the curve of the Red channel. This in effect is adding more of the Red color to our final image.
+                </p>
+                
+                <figure class="figure mb-7">
+
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/redchannelsinecurve.jpg" alt="...">
+
+                  <figcaption class="figure-caption text-center">
+                    Red Channel Curve
+                  </figcaption>
+
+                </figure>
+                
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto.png" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          Original
+                      </figcaption>
+                </figure>
+                
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/raiseredcurve.jpg" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          After
+                      </figcaption>
+                </figure>
+                
+                
+                <h2 class="fw-bold">
+                    RGB - Red Channel
+                </h2>
+                <p>
+                Besides applying a Photo Curve on individual color channels (RGB) and getting back a combined image. We can aslo apply the curve on an individual channel such as the Red Channel and then get back the image of this specific channel. We can change the Channel Mode to "RGB Red" as shown below.
+                </p>
+                
+                <figure class="figure mb-7">
+
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/channelmodered.jpeg" alt="...">
+
+                  <figcaption class="figure-caption text-center">
+                    Channel Mode: RGB Red
+                  </figcaption>
+
+                </figure>
+                
+                <p>
+                
+                Working with a single channel is useful in circumstances when one of the color channels in the photo enables us to more easily extract a mask.
+                </p>
+                
+                <figure class="figure mb-7">
+
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/redchanneltonecurve.jpeg" alt="...">
+
+                  <figcaption class="figure-caption text-center">
+                    Red Channel: Linear Photo Curve
+                  </figcaption>
+
+                </figure>
+                
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/darkphoto.png" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          Original
+                      </figcaption>
+                </figure>
+                
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="curves/RGBRedChannel.jpg" alt="...">
+                      <figcaption class="figure-caption text-center">
+                          After
+                      </figcaption>
+                </figure>
+
+                <h2 class="fw-bold">
+                    Open Source Project
+                </h2>
+                <h1 class="display-4">
+                  Download Photo Curves
+                </h1>
+
+                <p>
+                
+                <a class="text-reset d-inline-block me-1" href="https://apps.apple.com/us/app/photo-tone-curves/id6448858078">
+                  <img src="assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
+                </a>
+
+                </p>
+                
+                <p>
+                <a href="photoeditor/PhotoCurves.zip" class="btn btn-info lift">
+                  Source: PhotoCurves.zip<i class="fe fe-arrow-right ms-2"></i>
+                </a>
+                </p>
+
+                <figure class="figure mb-7">
+                  <img class="figure-img img-fluid rounded lift lift-lg" width="40%" height="40%" src="curves/photocurves.png" alt="Photo Curves">
+                      <figcaption class="figure-caption text-left">
+                          Photo Curves: iOS
+                      </figcaption>
+                </figure>
+                
+                </p>
+      
+                <p>
+                <a href="https://github.com/Misfits-Rebels-Outcasts/Photo-Curves" rel="nofollow" class="btn btn-info lift">
+                  GitHub: Photo Curves<i class="fe fe-arrow-right ms-2"></i>
+                </a>
+                </p>
               </div>
             </div> <!-- / .row -->
           </div> <!-- / .container -->
