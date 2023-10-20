@@ -1,0 +1,8 @@
+
+cd Documents
+cd EbSynth
+cd finals
+
+ffmpeg -i top_l.mp4 -i top_r.mp4 -i bottom_l.mp4 -i bottom_r.mp4  \
+-filter_complex "[0:v][1:v]hstack[t];[2:v][3:v]hstack[b];[t][b]vstack[v]" \
+-map "[v]"  -r 30 -c:a copy -shortest output.mp4
