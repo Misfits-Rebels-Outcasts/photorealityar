@@ -393,25 +393,125 @@
 
           <div class="container text-white">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8 text-center">
+                <div class="col-12 col-md-10 col-lg-8 text-left">
                   <h1 class="display-4">
-                      Video Editor
+                      Video Editing Ideas
                   </h1>
-                  <h3 class="fw-bold">
-                      Coming soon...
-                  </h3>
-
-               
-                  <p  class="mb-6 mb-md-8">
-                  
+                  <p>&nbsp;</p>
+                  <p>Reality ^Cat Cut is an Open-source video editor SDK with a Digital Compositing workflow. It is designed from the ground up to <a href="Reduce-Cognitive-Overload-In-Graphics-Software.pdf">reduce cognitive overload in graphics software</a> for modern touch and spatial devices.
+                                                  
+                  </p>
                   <figure class="figure mb-7">
-                      <img class="figure-img img-fluid rounded lift lift-lg" src="videos/kittyofthedark.gif" alt="digital compositing" width="50%" height="50%">
+                      <img class="figure-img img-fluid rounded lift lift-lg" src="videos/VideoEditorSDK.JPG" alt="One Step at a Time" width="100%" height="100%">
                       <p>
-                      <figcaption class="figure-caption text-center">
-                          Digital Compositing : Photo Effect Noir
+                  </figure>
+                  <p>&nbsp;</p>
+                  
+                  <h2 class="fw-bold">
+                      Photo Effect Noir
+                  </h2>
+                  <figure class="figure mb-7">
+                      <img class="figure-img img-fluid rounded lift lift-lg" src="videos/kittyofthedark.gif" alt="Photo Effect Noir" width="50%" height="50%">
+                      <p>
+                      <figcaption class="figure-caption text-left">
+                          Digital Compositing <br />
+                          1. Read Video <br />
+                          2. Photo Effect Noir(1) <br />
                       </figcaption>
                       <p>&nbsp;</p>
-                      
+                  </figure>
+                  <strong>Brief Explanation</strong><br /><br />
+                  Applies a Photo Effect Noir on the original video in node 1.
+                  </p>
+                  <p>&nbsp;</p>
+                  
+                  <h2 class="fw-bold">
+                    Pointillistic Stripe Effect
+                  </h2>
+                  <figure class="figure mb-7">
+                      <img class="figure-img img-fluid rounded lift lift-lg" src="videos/VideoEditor.JPG" alt="Multiply Blend Node" width="50%" height="50%">
+                      <p>
+                      <figcaption class="figure-caption text-left">
+                          Digital Compositing <br />
+                          1. Read Video <br />
+                          2. Stripes Generator : Width=150, Color1=Grey <br />
+                          3. Pointillize(2) <br />
+                          4. Multiply Blend Node (3,"1") <br />
+                      </figcaption>
+                  </figure>
+          
+                <p>
+                <strong>Brief Explanation</strong><br /><br />
+                Stripes Generator is a node requiring no input. The Pointillize node applies the pointillistic style on the Stripes Generator. The Multiply Blend Node in step 4 is a composite node that multiplies the output of node 3 with that of the original video in node 1.
+                </p>
+                
+                <h2 class="fw-bold">
+                  Swipe Transition
+                </h2>
+                <figure class="figure mb-7">
+                    <img class="figure-img img-fluid rounded lift lift-lg" src="videos/SwipeTransition.JPG" alt="Multiply Blend Node" width="50%" height="50%">
+                    <p>
+                    <figcaption class="figure-caption text-left">
+                        Digital Compositing <br />
+                        1. Read Video <br />
+                        2. Zoom Blur(1) <br />
+                        4. Swipe Transition (2,"1"): Angle=33 <br />
+                    </figcaption>
+                </figure>
+                <strong>Brief Explanation</strong><br /><br />
+                This pipeline applies a swipe transition, at an angle of 33 degress, from the Zoom Blur output of the video to that of the original video.
+                </p>
+                
+                <h2 class="fw-bold">
+                  Join Video (Beta)
+                </h2>
+                <figure class="figure mb-7">
+                    <img class="figure-img img-fluid rounded lift lift-lg" src="videos/JoinVideo.JPG" alt="Join Video" width="50%" height="50%">
+                    <p>
+                    <figcaption class="figure-caption text-left">
+                        Digital Compositing <br />
+                        1. Read Video <br />
+                        2. Comic Effect(1) <br />
+                        3. Join Video (2,"1")<br />
+                    </figcaption>
+                </figure>
+                <strong>Brief Explanation</strong><br /><br />
+                This pipeline joins/concats the Comic Effect of a video with the original video.
+                </p>
+                
+                <h2 class="fw-bold">
+                  Cut Video (Beta)
+                </h2>
+                <figure class="figure mb-7">
+                    <img class="figure-img img-fluid rounded lift lift-lg" src="videos/CutVideo.jpeg" alt="Join Video" width="50%" height="50%">
+                    <p>
+                    <figcaption class="figure-caption text-left">
+                        Digital Compositing <br />
+                        1. Read Video <br />
+                        2. Cut Video(1): StartTime=0.0, StopTime=3.0 <br />
+                    </figcaption>
+                </figure>
+                <strong>Brief Explanation</strong><br /><br />
+                This pipeline trims the video with the specified start and stop time.
+                </p>
+                
+                <p>&nbsp;</p>
+                <hr />
+                <p>&nbsp;</p>
+                <h1 class="display-4">
+                    Video Editor SDK
+                </h1>
+                <p>This is a shoutout to other developers and programmers that this Video Editor SDK is Open-Source. Join us in changing how content creators edit videos with Digital Compositing.</p>
+                <p>&nbsp;</p>
+                <figure class="figure mb-7">
+
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="images/ARMovieVideoMaker.jpg" alt="Create AR Movie" width="100%" height=-"100%">
+                      <figcaption class="figure-caption text-center">
+                          Inspired by Cats: "Boo"
+                      </figcaption>
+                </figure>
+                
+                      <!--
                       <img class="figure-img img-fluid rounded lift lift-lg" src="images/whereismyapple.JPG" alt="AR Movie Maker" width="50%" height="50%">
                       <p>
                       <figcaption class="figure-caption text-center">
@@ -498,7 +598,7 @@
 
                   </figure>
                   </p>
- 
+                      -->
               </div>
             </div> <!-- / .row -->
           </div> <!-- / .container -->
