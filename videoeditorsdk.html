@@ -415,11 +415,11 @@
                   </div>
                   <p>&nbsp;</p>
                   <div>
-                      <img src="videos/sleepy.JPG" alt="Garden Cat" width="30%" height="30%">
+                      <img src="videos/sleepy.JPG" alt="Garden Cat" width="25%" height="25%">
                             +
-                      <img src="videos/comiceffect.JPG" alt="Pointillistic" width="30%" height="30%">
+                      <img src="videos/comiceffect.JPG" alt="Pointillistic" width="25%" height="25%">
                            ->
-                      <img src="videos/swipecomic.JPG" alt="Multiply Blend Node" width="30%" height="30%">
+                      <img src="videos/swipecomic.JPG" alt="Multiply Blend Node" width="25%" height="25%">
                       </div>
                   
                   <figure class="figure mb-7">
@@ -432,6 +432,21 @@
                       </figcaption>
                   </figure>
                   
+                  <p>
+                  <strong>Brief Explanation</strong>
+                  </p>
+                  <p>
+                  The Comic Effect of a video is combined with that of the original video with a Swipe Transition. This creates the VFX effect of the kitten stepping on a 'cartoon like' floor.
+                  </p>
+                  <div>
+                      <img src="videos/comiceffectswipe.PNG" alt="Comic Swipe" width="25%" height="25%">
+                          &nbsp;
+                      <img src="videos/comiceffect.PNG" alt="Comic Effect" width="25%" height="25%">
+                 </div>
+                  <p>&nbsp;</p>
+
+                  
+                  
                   <h2 class="fw-bold">
                     Join Video Clips (Beta)
                   </h2>
@@ -443,16 +458,24 @@
                           Digital Compositing <br />
                           1. Read Video <br />
                           2. Read Video <br />
-                          3. Join Video (2,"1")<br />
+                          3. Read Video <br />
+                          4. Join Video ("2",3)<br />
+                          5. Join Video ("1",4)<br />
                       </figcaption>
                   </figure>
-                  
+                  <p>
+                  <strong>Brief Explanation</strong>
+                  </p>
+                  <p>
+                  There are a total of 3 input video clips: with 1 cat, 2 cats, and 3 cats. The video clips are merged/concat with multiple Join nodes. The final video is one that shows video clip 1, followed by video clip 2 and finally video clip 3.
+
+                  </p>
                          
                   <h2 class="fw-bold">
                       Photo Effect Noir
                   </h2>
                   <figure class="figure mb-7">
-                      <img class="figure-img img-fluid rounded lift lift-lg" src="videos/kittyofthedark.gif" alt="Photo Effect Noir" width="50%" height="50%">
+                      <img class="figure-img img-fluid rounded lift lift-lg" src="videos/kittyofthedark.gif" alt="Photo Effect Noir" width="55%" height="55%">
                       <p>
                       <figcaption class="figure-caption text-left">
                           Digital Compositing <br />
@@ -475,8 +498,11 @@
                     2. Cut Video(1): StartTime=0.0, StopTime=3.0 <br />
                 </figcaption>
             </figure>
-            <strong>Brief Explanation</strong><br /><br />
-            This pipeline trims the video with the specified start and stop time.
+            <p>
+            <strong>Brief Explanation</strong>
+            </p>
+            <p>
+            Trims the video with the specified start and stop time.
             </p>
             <p>&nbsp;</p>
                   <h2 class="fw-bold">
@@ -508,8 +534,9 @@
                   </figure>
           
                 <p>
-                <strong>Brief Explanation</strong><br /><br />
-                Stripes Generator is a node requiring no input. The Pointillize node applies the pointillistic style on the Stripes Generator. The Multiply Blend Node in step 4 is a composite node that multiplies the output of node 3 with that of the original video in node 1.
+                <strong>Brief Explanation</strong></p>
+                <p>
+                Stripes Generator is a node requiring no input. The Pointillize node applies the pointillistic style on the Stripes Generator. The Multiply Blend Node in step 4 is a composite node that multiplies the output of node 3 with that of the original video in node 1. This creates a patterned effect overlayed on the original video.
                 </p>
                 
                 <h2 class="fw-bold">
@@ -535,27 +562,11 @@
                         4. Swipe Transition (2,"1"): Angle=33 <br />
                     </figcaption>
                 </figure>
-                <strong>Brief Explanation</strong><br /><br />
-                This pipeline applies a swipe transition, at an angle of 33 degress, from the Zoom Blur output of the video to that of the original video.
+                <p>
+                <strong>Brief Explanation</strong></p>
+                <p>
+                This pipeline applies a swipe transition, at an angle of 33 degress, from the Zoom Blur output of the video to that of the original video. The final video shows the Zoom Blur covering half of the video at an angle.
                 </p>
-                
-        
-
-                <!--
-                <figure class="figure mb-7">
-                    <img class="figure-img img-fluid rounded lift lift-lg" src="videos/JoinVideo.JPG" alt="Join Video" width="50%" height="50%">
-                    <p>
-                    <figcaption class="figure-caption text-left">
-                        Digital Compositing <br />
-                        1. Read Video <br />
-                        2. Comic Effect(1) <br />
-                        3. Join Video (2,"1")<br />
-                    </figcaption>
-                </figure>
-                <strong>Brief Explanation</strong><br /><br />
-                This pipeline joins/concats the Comic Effect of a video with the original video.
-                </p>
-                -->
                 
                 
                 <p>&nbsp;</p>
@@ -564,7 +575,44 @@
                 <h1 class="display-4">
                     Video Editor SDK
                 </h1>
-                <p>This is a shoutout to other developers and programmers that this Video Editor SDK is Open-Source. Join us in changing how content creators edit videos with Digital Compositing.</p>
+                <p>This Video Editor app and SDK is fully Open-Source. Please feel free to extend, fork, or contribute to the project.
+                </p>
+                <p>
+                <center>
+                    <a href=https://github.com/Misfits-Rebels-Outcasts/Nodef>Misfits-Rebels-Outcasts/Nodef</a>
+                </center>
+                </p>
+                <p>
+                The initial part of the project will be focused on the techniques described in the following Digital Compositing books.</p>
+                
+                <ul class="list-unstyled mb-7">
+                              <li class="d-flex">
+
+                                <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                                  <i class="fe fe-check"></i>
+                                </div>
+                              
+                                <p>
+                                Digital Compositing for Film and Video by Steve Wright
+                                </p>
+                                
+
+                              </li>
+                              <li class="d-flex">
+
+                                <div class="badge badge-rounded-circle bg-success-soft mt-1 me-4">
+                                  <i class="fe fe-check"></i>
+                                </div>
+                                </p>
+                                The Art and Science of Digital Compositing: Techniques for Visual Effects, Animation and Motion Graphics by Brinkmann, Ron
+                              
+                                </p>
+                                
+
+                              </li>
+                </ul>
+                
+          
                 <p>&nbsp;</p>
                 <figure class="figure mb-7">
 
@@ -659,96 +707,11 @@
                 </h2>
                 
                 <p>
-                We can 'long pressing' on the Yellow Socket of a node to temporarily display the output of each node.  We can also 'cycle' through and view the output of each node by "long pressing" on each of the nodes. This 'Viewer Cycling' through the nodes helps visualize and understand what is going on in each step of the node-graph.
+                By default, the Viewer displays the output of the last node in the node-graph. You can 'long press' on the Yellow Socket of a specific node to set the Viewer to temporarily display its output.</p>
+                <p>
+                You can also 'cycle' through and view the output of each node by "long pressing" on each of the nodes. This 'Viewer Cycling' through the nodes helps us visualize and understand what is going on in each step of the node-graph.
                </p>
-                      <!--
-                      <img class="figure-img img-fluid rounded lift lift-lg" src="images/whereismyapple.JPG" alt="AR Movie Maker" width="50%" height="50%">
-                      <p>
-                      <figcaption class="figure-caption text-center">
-                          Where is my USDZ Apple? 
-                      </figcaption>
-                      <p>&nbsp;</p>
-                      
-                      
-                          <img class="figure-img img-fluid rounded lift lift-lg" src="ar/realitykitshaders/realitykit_terrain_shader.gif" alt="surface shaders">
-                          <p>
-                          <figcaption class="figure-caption text-center">
-                              Terrain Shader
-                          </figcaption>
-                          </p>
-                          <p>&nbsp;</p>
-                          
-                          <img class="figure-img img-fluid rounded lift lift-lg" src="videos/surfaceshaders_geometrymodifiers.gif" alt="surface shaders" >
-                              
-                    <figcaption class="figure-caption text-center">
-                        SeaShore scene generated with <a href="realitykit_terrainshader_surfaceshader_geometrymodifier.html">
-                      Custom Materials</a> (Surface Shaders & Geometry Modifiers) and Fractal Brownian Motion (fBM).
-                    </figcaption>
-                    <p>&nbsp;</p>
-                    <div>
-                        <a rel="ar" href="assets/models/rock.usdz">
-                            <img src="assets/models/rock.jpg" width="100%" height="100%">
-                        </a>
-                    </div>
-                    <p>&nbsp;</p>
-                    <figcaption class="figure-caption text-center">
-                       
-                       USDZ Rock ornament - Universal Scene Description
-                    </figcaption>
-                  
-                
-                    
-                  </figure>
-                  
-                  <figure class="figure mb-7">
-                  
-                    <img class="figure-img img-fluid rounded lift lift-lg" src="assets/models/catwalk.gif" alt="Cat Walk"  width="50%" height="50%">
-                        
-                        <figcaption class="figure-caption text-center">
-                          <i>Boo</i> auditioning for Animal Pose MoCap
-                        </figcaption>
-                        <p>&nbsp;</p>
-                        
-                        <div>
-                            <a rel="ar" href="assets/models/woodtoy.usdz">
-                                <img src="assets/models/woodtoy.jpg" width="40%" height="40%">
-                            </a>
-                        </div>
-                        <p>&nbsp;</p>
-                        <figcaption class="figure-caption text-center">
-                          Wood Toy USDZ - Photogrammetry
-                        </figcaption>
-                        <p>&nbsp;</p>
-
-                        <img class="figure-img img-fluid rounded lift lift-lg" src="assets/models/handnimation.gif" alt="Handnimation"  width="50%" height="50%">
-                            <figcaption class="figure-caption text-center">
-                              Hand Gesture Puppetry
-                            </figcaption>
-                            <p>&nbsp;</p>
-                    <div>
-                        <a rel="ar" href="assets/models/CauliflowerHead.usdz">
-                            <img src="assets/models/CauliflowerHead.jpg" width="40%" height="40%">
-                        </a>
-                    </div>
-                    <p>&nbsp;</p>
-                    <figcaption class="figure-caption text-center">
-                     Cauliflower Head USDZ
-                    </figcaption>
-                    
-                  </figure>
-
-
-                  </p>
-                  <p  class="mb-6 mb-md-8">
-                  <figure class="figure mb-7">
-                  <img class="figure-img img-fluid rounded lift lift-lg" src="images/MalaccaFire.gif" alt="surface shaders" width="80%" height="80%">
-                  <figcaption class="figure-caption text-center">
-                        Reality Metal Shader - Fire Effects
-                  </figcaption>
-
-                  </figure>
-                  </p>
-                      -->
+           
               </div>
             </div> <!-- / .row -->
           </div> <!-- / .container -->
