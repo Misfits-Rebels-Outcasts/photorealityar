@@ -414,7 +414,10 @@
               Spatial Shader
           </h1>
           <p>&nbsp;</p>
-          <p>Spatial Shader is a shader engine that creates stereoscopic spatial shader experiences. The engine achieves the stereoscopic effect, by rendering two shader images, one for each eye, taking into account the positional differences between the device anchor and the position of the person’s eyes. A spatial shader, similar to a spatial photo or spatial video, will appear in 3D when viewed on Apple Vision Pro. Spatial Shader uses Metal low-overhead hardware-accelerated 3D graphic and compute shader API created by Apple, to draw everything a user see.
+          <p>Spatial Shader is a shader engine that creates stereoscopic spatial shader experiences. The engine achieves the stereoscopic effect, by rendering two shader images, one for each eye, taking into account the positional differences between the device anchor and the position of the person’s eyes. A spatial shader, similar to a spatial photo or spatial video, will appear in 3D when viewed on Apple Vision Pro.
+          </p>
+          <p>
+          Spatial Shader uses Apple's low-overhead 3D hardware-accelerated Metal API 3D to draw everything a user sees.
           </p>
           
           <figure class="figure mb-7">
@@ -436,6 +439,62 @@
           </a>
           <p>&nbsp;</p>
 
+          <h2 class="fw-bold">
+              Inside a Mandelbulb
+          </h2>
+          
+          <p>
+          A mandelbulb is a 3 dimensional fractal, widely recognized for its intricate and visually stunning structures. It is an extension of the Mandelbrot Set (2D fractal) into three dimensions. It is created in 2009 by Daniel White and Paul Nylander and uses a novel formula involving spherical coordinates.
+          </p>
+
+          <figure class="figure mb-7">
+              <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/spatialmandelbulb.png" alt="Spatial Mandelbulb Shader" width="100%" height="100%">
+              <p>
+          </figure>
+          <p>&nbsp;</p>
+
+          <h2 class="fw-bold">
+              Irregular Gyroid - Blue vs Red
+          </h2>
+          
+          <p>
+          A blue vs red irregular gyroid.
+          </p>
+
+          <figure class="figure mb-7">
+              <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/bluevsredgyroid.png" alt="Blue vs Red Gyroid Shader" width="100%" height="100%">
+              <p>
+          </figure>
+          <p>&nbsp;</p>
+          
+          <h2 class="fw-bold">
+              Gnarly Colorful Apollonian
+          </h2>
+          
+          <p>
+          Gnarly Colorful Apollonian
+          </p>
+
+          <figure class="figure mb-7">
+              <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/GnarlyColorfulApollonian.png" alt="Gnarly Colorful Apollonian Shader" width="100%" height="100%">
+              <p>
+          </figure>
+          <p>&nbsp;</p>
+  
+          <h2 class="fw-bold">
+              Cloudy Crystal
+          </h2>
+          <p>
+          Cloudy Crystal
+          </p>
+
+          <figure class="figure mb-7">
+              <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/cloudycrystal.png" alt="Cloudy Crystal Shader" width="100%" height="100%">
+              <p>
+          </figure>
+          <p>&nbsp;</p>
+          
+  <!--
         <h2 class="fw-bold">
             Spatial Desert Shader (Stereoscopic Shader)
         </h2>
@@ -449,15 +508,14 @@
             <p>
         </figure>
         <p>&nbsp;</p>
-        
-        
+      -->
         
         <h2 class="fw-bold">
             Mountain Terrain
         </h2>
         
         <p>
-        
+        This shader shows a randomly generated Terrain using mathematics.
         </p>
 
         <figure class="figure mb-7">
@@ -467,11 +525,11 @@
         <p>&nbsp;</p>
 
         <h2 class="fw-bold">
-            River with seal
+            River with Seal
         </h2>
         
         <p>
-        
+        This shader shows an endless river with a small animal swimming in it
         </p>
 
         <figure class="figure mb-7">
@@ -481,29 +539,30 @@
         <p>&nbsp;</p>
 
         <h2 class="fw-bold">
-            Seascape
+            Ocean Shader
         </h2>
         
         <p>
-        
+        The ocean shader uses weighted normals to give a cartoon style shading effect
         </p>
 
         <figure class="figure mb-7">
-            <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/spatial_seascape_shader_stereoscopic.png" alt="Spatial Sea Scape Shader" width="100%" height="100%">
+            <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/spatial_seascape_shader_stereoscopic.png" alt="Spatial Ocean Shader" width="100%" height="100%">
             <p>
         </figure>
         <p>&nbsp;</p>
         
         <h2 class="fw-bold">
-            Primitives
+            Primitives Shader - RayMarching
         </h2>
         
         <p>
-        
+        A list of useful distance function to simple primitives. All these functions (except for ellipsoid) return an exact euclidean distance, meaning they produce a better SDF than what you'd get if you were constructing them from boolean operations (such as cutting an infinite cylinder with two planes).
+
         </p>
 
         <figure class="figure mb-7">
-            <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/spatial_desert_shader_stereoscopic.png" alt="Spatial Shader" width="100%" height="100%">
+            <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/spatialprimitivesshader.png" alt="Spatial Primitive Shader" width="100%" height="100%">
             <p>
         </figure>
         <p>&nbsp;</p>
