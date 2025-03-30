@@ -21,10 +21,10 @@
     
     <!-- Title -->
     
-    <title>Spatial White Cow Video</title>
-    <meta content="Spatial White Cow Video"
+    <title>Bump Distortion Spatial Photo Filter</title>
+    <meta content="Bump Distortion Spatial Photo Filter"
                 name="description">
-    <meta content="spatial white cow video, spatial animal video"
+    <meta content="Bump Distortion"
                 name="keywords">
                 
   </head>
@@ -461,30 +461,59 @@
     </nav>
     
         <section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
-
           <div class="container text-white">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8 text-left">
-                  <h1 class="display-4">
-                      Spatial White Cow Video
-                  </h1>
-                  
-                  <p>&nbsp;</p>
-                  <figure class="figure mb-7">
-                      <img class="figure-img img-fluid rounded lift lift-lg" src="spatialanimalvideos/spatialwhitecowvideo.MOV" alt="Spatial White Cow Video - Spatial Animal Videos" width="100%" height="100%">
-                          <figcaption class="figure-caption text-center">
-                            Spatial White Cow Video
-                          </figcaption>
-                  </figure>
-                  <p>&nbsp;</p>
-                  
-                  <p>
-                  See more <a href=spatialanimalvideos.html>Spatial Animal Videos</a>
-                  </p>
-                  
+              <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+
+                <!-- Heading -->
+                <h1 class="display-4">
+                  Bump Distortion Spatial Photo Filter
+                </h1>
+              
+                <p>
+                This filter creates a bump distortion effect by warping the image around a specified point. It is often used to create a 3D-like effect.
+                </p>
+                
+                
+                <figure class="figure mb-7">
+
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="spatialphotofilters/BumpDistortionSpatialPhotoFilter.heic" alt="Bump Distortion">
+
+                  <figcaption class="figure-caption text-center">
+                    Tap on the image above and select 'View Spatial Photo' (only works in Vision Pro Safari).
+                  </figcaption>
+
+                </figure>
+
+               <h2>PIPELINE Node Source Code</h2>
+          
+               <h3>CIFilter : CIBumpDistortion</h3>
+                <p>
+                    <div style="border:1px solid gray">
+                        <pre style="overflow:auto; word-wrap:normal; white-space:pre;font-family: monospace;font-size:12px;margin-left:10px;margin-right:10px">
+
+override func getCIFilter(_ ciImage: CIImage)->CIFilter
+{
+    let currentCIFilter = CIFilter(name: type)!
+    currentCIFilter.setValue(ciImage, forKey: kCIInputImageKey)
+    let tcenter=CIVector(x:centerX,y:centerY)
+    
+    currentCIFilter.setValue(tcenter, forKey: kCIInputCenterKey)
+    currentCIFilter.setValue(radius, forKey: kCIInputRadiusKey)
+    currentCIFilter.setValue(scale, forKey: kCIInputScaleKey)
+    currentCIFilter.setValue(angle, forKey: kCIInputAngleKey)
+    ciFilter=currentCIFilter
+
+    return currentCIFilter
+}
+
+                        </pre>
+                    </div>
+                </p>
+                                              
               </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .container -->
+            </div> 
+          </div> 
         </section>
 
     

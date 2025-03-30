@@ -21,10 +21,10 @@
     
     <!-- Title -->
     
-    <title>Spatial White Cow Video</title>
-    <meta content="Spatial White Cow Video"
+    <title>Bloom Spatial Photo Filter</title>
+    <meta content="Bloom Spatial Photo Filter"
                 name="description">
-    <meta content="spatial white cow video, spatial animal video"
+    <meta content="Bloom"
                 name="keywords">
                 
   </head>
@@ -461,30 +461,62 @@
     </nav>
     
         <section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
-
           <div class="container text-white">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8 text-left">
-                  <h1 class="display-4">
-                      Spatial White Cow Video
-                  </h1>
-                  
-                  <p>&nbsp;</p>
-                  <figure class="figure mb-7">
-                      <img class="figure-img img-fluid rounded lift lift-lg" src="spatialanimalvideos/spatialwhitecowvideo.MOV" alt="Spatial White Cow Video - Spatial Animal Videos" width="100%" height="100%">
-                          <figcaption class="figure-caption text-center">
-                            Spatial White Cow Video
-                          </figcaption>
-                  </figure>
-                  <p>&nbsp;</p>
-                  
-                  <p>
-                  See more <a href=spatialanimalvideos.html>Spatial Animal Videos</a>
-                  </p>
-                  
+              <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+
+                <!-- Heading -->
+                <h1 class="display-4">
+                  Bloom Spatial Photo Filter
+                </h1>
+              
+                <p>
+                This filter adds a soft, glowing effect to an image by blurring the bright areas. It is often used to create a dreamy or ethereal look.
+                </p>
+                
+                
+                <figure class="figure mb-7">
+
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="spatialphotofilters/BloomSpatialPhotoFilter.heic" alt="Bloom">
+
+                  <figcaption class="figure-caption text-center">
+                    Tap on the image above and select 'View Spatial Photo' (only works in Vision Pro Safari).
+                  </figcaption>
+
+                </figure>
+
+               <h2>PIPELINE Node Source Code</h2>
+          
+               <h3>CIFilter : CIBloom</h3>
+                <p>
+                    <div style="border:1px solid gray">
+                        <pre style="overflow:auto; word-wrap:normal; white-space:pre;font-family: monospace;font-size:12px;margin-left:10px;margin-right:10px">
+
+override func getCIFilter(_ ciImage: CIImage)->CIFilter
+{
+    
+    var currentCIFilter: CIFilter
+    if ciFilter != nil {
+        currentCIFilter = ciFilter!
+    } else {
+        currentCIFilter = CIFilter(name: type)!
+        ciFilter=currentCIFilter
+    }
+    currentCIFilter.setValue(ciImage, forKey: kCIInputImageKey)
+    currentCIFilter.setValue(radius, forKey: kCIInputRadiusKey)
+    currentCIFilter.setValue(intensity, forKey: kCIInputIntensityKey)
+
+    return currentCIFilter
+    
+}
+
+                        </pre>
+                    </div>
+                </p>
+                                              
               </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .container -->
+            </div> 
+          </div> 
         </section>
 
     
