@@ -21,10 +21,10 @@
     
     <!-- Title -->
     
-    <title>Spatial Photo Filters</title>
-    <meta content="Spatial Photo Filters"
+    <title>Comic Effect Spatial Photo Filter</title>
+    <meta content="Comic Effect Spatial Photo Filter"
                 name="description">
-    <meta content="spatial photo filters, spatial image filters"
+    <meta content="Comic Effect"
                 name="keywords">
                 
   </head>
@@ -467,90 +467,54 @@
 
                 <!-- Heading -->
                 <h1 class="display-4">
-                  Spatial Photo Filters
+                  Comic Effect Spatial Photo Filter
                 </h1>
               
                 <p>
-                <a style="color: lightblue;" href=spatialphotoeditor.html>Spatial Photo Editor</a> is equipped with over 100 of Spatial Photo Filters that you can mix and blend in a Pipeline. For example, you can combine a Comic Effect and Zoom Blur filter easily to get the effect that you wanted. 
+                This filter applies a comic book-like effect to an image by enhancing the edges and reducing the color palette. It is often used to create a stylized or vintage look.
                 </p>
+                
                 
                 <figure class="figure mb-7">
 
-                  <img class="figure-img img-fluid rounded lift lift-lg" src="spatialphotoeditor/spatialcatphoto.heic" alt="Spatial Photo">
+                  <img class="figure-img img-fluid rounded lift lift-lg" src="spatialphotofilters/ComicEffectSpatialPhotoFilter.heic" alt="Comic Effect">
 
                   <figcaption class="figure-caption text-center">
-                      Original Spatial Photo
+                    Tap on the image above and select 'View Spatial Photo' (only works in Vision Pro Safari).
                   </figcaption>
 
                 </figure>
-                
-                
-                <p>
-                
-                <h2>Spatial Photo Filters</h2>
-                <p>
 
-                <a href="AffineTileSpatialPhotoFilter.html">
-                <span style="margin-bottom: 10px; padding: 15px;" class="badge badge-lg bg-primary">
-                    <span class="h6 text-uppercase fw-bold">
-                    Spatial Affine Tile Filter
-                    </span>
-                </span>
-                </a>
-                
-                <a href="BloomSpatialPhotoFilter.html">
-                <span style="margin-bottom: 10px; padding: 15px;"  class="badge badge-lg bg-primary">
-                    <span class="h6 text-uppercase fw-bold">
-                    Spatial Bloom Filter
-                    </span>
-                </span>
-                </a>
-                                
-                <a href="BoxBlurSpatialPhotoFilter.html">
-                <span style="margin-bottom: 10px; padding: 15px;"  class="badge badge-lg bg-primary">
-                    <span class="h6 text-uppercase fw-bold">
-                    Spatial Box Blur Filter
-                    </span>
-                </span>
-                </a>
-                
-                <a href="BumpDistortionLinearSpatialPhotoFilter.html">
-                <span style="margin-bottom: 10px; padding: 15px;"  class="badge badge-lg bg-primary">
-                    <span class="h6 text-uppercase fw-bold">
-                    Spatial Bump Distortion Linear Filter
-                    </span>
-                </span>
-                </a>
-                
-                <a href="BumpDistortionSpatialPhotoFilter.html">
-                    <span style="margin-bottom: 10px; padding: 15px;"  class="badge badge-lg bg-primary">
-                        <span class="h6 text-uppercase fw-bold">
-                        Spatial Bump Distortion Filter
-                    </span>
-                </span>
-                </a>
-                
-                <a href="ComicEffectSpatialPhotoFilter.html">
-                <span style="margin-bottom: 10px; padding: 15px;"  class="badge badge-lg bg-primary">
-                    <span class="h6 text-uppercase fw-bold">
-                        Spatial Comic Effect Filter
-                    </span>
-                </span>
-                </a>
-                               
-                <a href="CMYKHalftoneSpatialPhotoFilter.html">
-                    <span style="margin-bottom: 10px; padding: 15px;"  class="badge badge-lg bg-primary">
-                        <span class="h6 text-uppercase fw-bold">
-                            Spatial CMYK Halftone Filter
-                    </span>
-                </span>
-                </a>
+               <h2>PIPELINE Node Source Code</h2>
+          
+               <h3>CIFilter : CIComicEffect</h3>
+                <p>
+                    <div style="border:1px solid gray">
+                        <pre style="overflow:auto; word-wrap:normal; white-space:pre;font-family: monospace;font-size:12px;margin-left:10px;margin-right:10px">
+                            
+override func getCIFilter(_ ciImage: CIImage)->CIFilter
+{
+    
+    var currentCIFilter: CIFilter
+    if ciFilter != nil {
+        currentCIFilter = ciFilter!
+    } else {
+        currentCIFilter = CIFilter(name: type)!
+        ciFilter=currentCIFilter
+    }
+    currentCIFilter.setValue(ciImage, forKey: kCIInputImageKey)
 
+    return currentCIFilter
+    
+}
+
+                        </pre>
+                    </div>
                 </p>
-                
+                                              
               </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .container -->
+            </div> 
+          </div> 
         </section>
 
     
