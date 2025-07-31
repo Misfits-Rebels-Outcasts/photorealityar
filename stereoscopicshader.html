@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Favicon -->
+    <!--
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+    -->
+    <link rel="shortcut icon" href="./photo.ico" type="image/x-icon" />
+
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    
+    <!-- Title -->
+    
+    <title>Stereoscopic Shaders</title>
+    <meta content="A stereoscopic shader renders two slightly offset views of a scene (for left and right eyes) to create the illusion of 3D depth when viewed with appropriate displays or glasses."
+                name="description">
+    <meta content="stereoscopic shaders, stereo shaders,"
+                name="keywords">
+                
+  </head>
+  <body>
+
+
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+    
+        <!-- Brand -->
+        <a class="navbar-brand" href="./index.html">
+            <!--
+          <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
+            <img src="./images/sigmanode.png"  class="navbar-brand-img"  />
+            -->
+            Reality ^Cat TV
+        </a>
+        
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+    
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+    
+          <!-- Navigation -->
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Photo
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+                <div class="row gx-0">
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                          Photo
+                        </h6>
+
+                        <a class="dropdown-item" href="./spatialphotoeditor.html">
+                          Spatial Photo Editor
+                        </a>
+
+                        <a class="dropdown-item" href="./photocurves.html">
+                          Photo Curves
+                        </a>
+                        <a class="dropdown-item" href="./photoshaders.html">
+                          Photo Shaders
+                        </a>
+    
+                        <a class="dropdown-item mb-5" href="./photodraw.html">
+                          Photo Draw
+                        </a>
+
+    
+                      </div>
+             
+                    </div>
+                  </div>
+                  
+   
+                  
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+                        <h6 class="dropdown-header">
+                          Digital Compositing
+                        </h6>
+    
+                        <a class="dropdown-item mb-5" href="./digitalcompositing.html">
+                          100 Days of Photo Editing
+                        </a>
+    
+                      </div>
+               
+                    </div>
+                  </div>
+                  
+                </div>
+              </div> <!-- / .row -->
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                  Video
+              </a>
+              
+       
+              
+              <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+                <div class="row gx-0">
+                    <div class="col-6">
+                      <div class="row gx-0">
+                        <div class="col-12 col-lg-6">
+
+                          <h6 class="dropdown-header">
+                            Video Editing
+                          </h6>
+
+                          <a class="dropdown-item" href="./videoeditorsdk.html">
+                            Video Editor
+                          </a>
+                          
+                          <a class="dropdown-item" href="./spatialvideos.html">
+                            Spatial Videos
+                          </a>
+                          
+                          <a class="dropdown-item" href="./spatialcatvideos.html">
+                            Spatial Cat Videos
+                          </a>
+                          
+                          <a class="dropdown-item mb-5" href="./spatialanimalvideos.html">
+                            Spatial Animal Videos
+                          </a>
+
+                        </div>
+                 
+                      </div>
+                    </div>
+                    
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                            Artificial Intelligence
+                        </h6>
+    
+                        <a class="dropdown-item" href="./stablediffusioncatanimator.html">
+                          Stable Diffusion Cat Animator
+                        </a>
+               
+        
+                      </div>
+             
+                    </div>
+                  </div>
+                  
+   
+      
+                  
+                </div>
+              </div> <!-- / .row -->
+            </li>
+            <!--
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Video
+              </a>
+              <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+                <div class="list-group list-group-flush">
+                  <a class="list-group-item" href="./videoeditorsdk.html">
+    
+                    <div class="icon icon-sm text-primary">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#335EEA" opacity=".3" d="M6 4h12l2 2.5H4z"></path><path d="M5 6h14a2 2 0 012 2v9a2 2 0 01-2 2h-3c-1 0-1.5-2-4-2s-2.5 2-4 2H5a2 2 0 01-2-2V8a2 2 0 012-2zm3 8a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"></path></g></svg>
+                    </div>
+ 
+                    <div class="ms-4">
+    
+                      <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        Video Editor
+                      </h6>
+    
+                      <p class="fs-sm text-gray-700 mb-0">
+                        Trim, Cut, Composite, and Add
+                      </p>
+                    </div>
+        
+    
+                  </a>
+             
+                </div>
+              </div>
+            </li>
+            -->
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Spatial Shader
+              </a>
+              
+              <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+                <div class="row gx-0">
+                    <div class="col-6">
+                      <div class="row gx-0">
+                        <div class="col-12 col-lg-6">
+      
+                          <h6 class="dropdown-header">
+                            Stereoscopic Shader
+                          </h6>
+                          
+                          <a class="dropdown-item mb-5" href="./spatialshader.html">
+                            Spatial Shader 
+                          </a>
+                  
+                        </div>
+                 
+                      </div>
+                    </div>
+                               
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Augmented Reality
+              </a>
+              
+              <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+                <div class="row gx-0">
+                    <div class="col-6">
+                      <div class="row gx-0">
+                        <div class="col-12 col-lg-6">
+      
+                          <h6 class="dropdown-header">
+                            Filmmaking AR Props
+                          </h6>
+                          
+                          <a class="dropdown-item mb-5" href="./publicdomainusdz.html">
+                            Public Domain USDZ
+                          </a>
+                  
+                          <a class="dropdown-item mb-5" href="./spatialcats.html">
+                            Spatial Cats USDZ
+                          </a>
+
+                        </div>
+                 
+                      </div>
+                    </div>
+                    
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+                        <!-- Heading -->
+                        <h6 class="dropdown-header">
+                            Augmented Reality
+                        </h6>
+    
+                 
+                        
+                        <a class="dropdown-item" href="./realitykit_terrainshader_surfaceshader_geometrymodifier.html">
+                            RealityKit Terrain Shader
+                        </a>
+                        
+    
+                      </div>
+             
+                    </div>
+                  </div>
+                  
+          
+                  <!--
+              <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+                <div class="list-group list-group-flush">
+                  <a class="list-group-item" href="./realitykit_terrainshader_surfaceshader_geometrymodifier.html">
+    
+                    <div class="icon icon-sm text-primary">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#335EEA" opacity=".3" d="M6 4h12l2 2.5H4z"></path><path d="M5 6h14a2 2 0 012 2v9a2 2 0 01-2 2h-3c-1 0-1.5-2-4-2s-2.5 2-4 2H5a2 2 0 01-2-2V8a2 2 0 012-2zm3 8a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"></path></g></svg>
+                    </div>
+ 
+                    <div class="ms-4">
+    
+                      <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        Spatial Computing
+                      </h6>
+    
+                      <p class="fs-sm text-gray-700 mb-0">
+                        RealityKit Terrain Shader
+                      </p>
+                    </div>
+        
+    
+                  </a>
+             
+                </div>
+              </div>
+                  -->
+            </li>
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                Filters & Effects
+              </a>
+              
+              <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
+                <div class="list-group list-group-flush">
+                    
+                    <a class="list-group-item" href="./stereoscopicshader.html">
+      
+                      <div class="icon icon-sm text-primary">
+                          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"/>
+                              <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0" fill="#335EEA" opacity=".3" />
+                              <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1" fill="#335EEA" opacity=".3" />
+                              <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0" fill="#335EEA" opacity=".3" />
+                              </g>
+                          </svg>
+                      </div>
+                                          <!--
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"/><path d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z" fill="#335EEA" opacity=".3"/></g></svg>                </div>
+                          -->
+
+                      <!-- Content -->
+                      <div class="ms-4">
+      
+                        <!-- Heading -->
+                        <h6 class="fw-bold text-uppercase text-primary mb-0">
+                            Stereoscopic Shaders
+                        </h6>
+      
+                        <!-- Text -->
+                        <p class="fs-sm text-gray-700 mb-0">
+                          List of Stereoscopic Shaders
+                        </p>
+                      </div>
+                
+                    </a>
+                    
+                    
+                    <a class="list-group-item" href="./spatialphotofilters.html">
+      
+                      <div class="icon icon-sm text-primary">
+                          
+                          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M4.308 13C3.033 13 2 11.993 2 10.75c0-.828.77-2.078 2.308-3.75 1.538 1.672 2.307 2.922 2.307 3.75 0 1.243-1.033 2.25-2.307 2.25zm15.384 0c-1.274 0-2.307-1.007-2.307-2.25 0-.828.769-2.078 2.307-3.75C21.231 8.672 22 9.922 22 10.75c0 1.243-1.033 2.25-2.308 2.25zM8.308 20C7.033 20 6 18.993 6 17.75c0-.828.77-2.078 2.308-3.75 1.538 1.672 2.307 2.922 2.307 3.75 0 1.243-1.033 2.25-2.307 2.25zM16 20c-1.275 0-2.308-1.007-2.308-2.25 0-.828.77-2.078 2.308-3.75 1.538 1.672 2.308 2.922 2.308 3.75 0 1.243-1.033 2.25-2.308 2.25z" fill="#335EEA" opacity=".3"></path><path d="M12 13c1.275 0 2.308-1.007 2.308-2.25 0-.828-.77-2.078-2.308-3.75-1.538 1.672-2.308 2.922-2.308 3.75C9.692 11.993 10.725 13 12 13z" fill="#335EEA"></path></g></svg></div>
+                          <!--
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"/><path d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z" fill="#335EEA" opacity=".3"/></g></svg>                </div>
+                          -->
+
+                      <!-- Content -->
+                      <div class="ms-4">
+      
+                        <!-- Heading -->
+                        <h6 class="fw-bold text-uppercase text-primary mb-0">
+                          Spatial Photo Filters
+                        </h6>
+      
+                        <!-- Text -->
+                        <p class="fs-sm text-gray-700 mb-0">
+                          Full list of Spatial Filters
+                        </p>
+                      </div>
+                
+                    </a>
+                    
+                  <a class="list-group-item" href="./photofilters.html">
+    
+                    <div class="icon icon-sm text-primary">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"/><path d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z" fill="#335EEA" opacity=".3"/></g></svg>                </div>
+
+                    <!-- Content -->
+                    <div class="ms-4">
+    
+                      <!-- Heading -->
+                      <h6 class="fw-bold text-uppercase text-primary mb-0">
+                        Photo Filters
+                      </h6>
+    
+                      <!-- Text -->
+                      <p class="fs-sm text-gray-700 mb-0">
+                        Full list of Filters
+                      </p>
+                    </div>
+        
+    
+                  </a>
+                  <a class="list-group-item" href="./photoeffects.html">
+    
+                    <!-- Icon -->
+                    <div class="icon icon-sm text-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M11 10.417V4a1 1 0 012 0v6.317l5.385-3.109a1 1 0 011 1.732l-5.47 3.16 5.385 3.108a1 1 0 01-1 1.732L13 13.88V20a1 1 0 01-2 0v-6.218L5.529 16.94a1 1 0 11-1-1.732L9.914 12.1 4.444 8.94a1 1 0 011-1.732L11 10.417z" fill="#335EEA" opacity=".3"></path><path d="M7.858 9.78a1 1 0 01-.666 1.348l-1.931.517a1 1 0 01-.518-1.932l1.932-.517a1.01 1.01 0 01.128-.026 1.01 1.01 0 01-.042-.123l-.518-1.932a1 1 0 111.932-.517l.518 1.931a1 1 0 01-.835 1.25zm9.168 5.293c.016.04.03.08.041.123l.518 1.931a1 1 0 01-1.932.518l-.517-1.932a1 1 0 01.834-1.25 1 1 0 01.666-1.348l1.931-.517a1 1 0 11.518 1.931l-1.932.518a1.01 1.01 0 01-.127.026zM15.97 9.78a1 1 0 01-.834-1.25l.517-1.932a1 1 0 011.932.517l-.518 1.932a1.01 1.01 0 01-.041.123c.042.006.085.014.127.026l1.932.517a1 1 0 01-.518 1.932l-1.931-.518a1 1 0 01-.666-1.347zm-9.167 5.293a1.01 1.01 0 01-.128-.026l-1.932-.518a1 1 0 11.518-1.931l1.932.517a1 1 0 01.665 1.348 1 1 0 01.834 1.25l-.517 1.932a1 1 0 11-1.932-.518l.518-1.931a1.01 1.01 0 01.042-.123zm5.111-7.635a1 1 0 01-1.5.098L9 6.12a1 1 0 111.414-1.414l1.414 1.414c.031.031.06.064.086.098A1.01 1.01 0 0112 6.12l1.414-1.414a1 1 0 111.414 1.414l-1.414 1.415a1 1 0 01-1.5-.098zm0 10.586a1.01 1.01 0 01-.086.097l-1.414 1.415A1 1 0 019 18.12l1.414-1.414a1 1 0 011.5.098 1 1 0 011.5-.098l1.414 1.414a1 1 0 01-1.414 1.415L12 18.12a1.01 1.01 0 01-.086-.097z" fill="#335EEA" opacity=".3"></path></g></svg>
+                    </div>
+    
+                    <div class="ms-4">
+                        <!-- Heading -->
+                        <h6 class="fw-bold text-uppercase text-primary mb-0">
+                            Photo Effects
+                        </h6>
+
+                        <!-- Text -->
+                        <p class="fs-sm text-gray-700 mb-0">
+                        Full list of Shader Effects
+                        </p>
+
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                 Download
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
+                <div class="row gx-0">
+                    
+                  <div class="col-6">
+                    <div class="row gx-0">
+                      <div class="col-12 col-lg-6">
+    
+       
+       <!--
+                        <h6 class="dropdown-header">
+                          Digital Compositing
+                        </h6>
+    
+   
+                        <a class="dropdown-item mb-5" href="./digitalcompositing.html">
+                          Open ^Graphics Pipeline
+                        </a>
+       -->
+                        <h6 class="dropdown-header">
+                          Agile Digital Compositing
+                        </h6>
+    
+                        <a class="dropdown-item mb-5" href="./Reduce-Cognitive-Overload-In-Graphics-Software.pdf">
+                          Reduce Cognitive Overload (PDF)
+                        </a>
+
+    
+                        <h6 class="dropdown-header">
+                          Download
+                        </h6>
+
+                        <!-- List -->
+                        <a class="dropdown-item" href="./download.html">
+                          
+                          Spatial Apps
+                         
+                        </a>
+                    
+                      </div>
+               
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+            </li>
+            
+
+          </ul>
+          
+          <a  class="navbar-btn btn btn-sm btn-info lift ms-auto" href="./gallery.html">
+              Gallery
+          </a>
+         
+ 
+        </div>
+    
+      </div>
+    </nav>
+    
+    <section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
+
+  <div class="container text-white">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-left">
+          <h1 class="display-4">
+              Stereoscopic Shaders
+          </h1>
+          <p>&nbsp;</p>
+         
+         <h2 class="fw-bold">
+             Ocean Wave
+         </h2>
+         <p>
+         Ocean Wave is a real-time shader that simulates the reflective, dynamic surface of a stylized ocean environment. The scene is built using raymarching across a procedural distance field that represents layered waveforms created through fractal noise and harmonic synthesis. These waveforms are animated smoothly over time to emulate fluid motion.
+         </p>
+         <p>
+         Lighting is driven by multiple dynamic sources, including directional sunlight and ambient reflections. Surface normals are computed with high precision, and subtle ambient occlusion enhances visual depth. The shader uses smooth blending functions to sculpt organic wave shapes and reflections.
+         </p>
+         <p>
+         Color is influenced by view-dependent effects such as fresnel reflection and surface shading, with hues dynamically modulated using procedural HSV-based gradients. The final color is adjusted for visual clarity and tone, creating a clean, bright, and immersive water-like appearance. Temporal controls support beat-synced animation, and multi-sample antialiasing is used for smooth image quality.
+         </p>
+         <p>&nbsp;</p>
+         <figure class="figure mb-7">
+           <video class="figure-img img-fluid rounded lift lift-lg" controls width="100%" height="100%" poster="spatialshader/OceanWave_StereoscopicShader.jpg">
+             <source src="spatialshader/OceanWave.mov" type="video/quicktime">
+             Your browser does not support the video tag.
+           </video>
+           <figcaption class="figure-caption text-center">
+             Tap on the Alien Ridge spatial video above and select 'View Spatial Video' (only works in Vision Pro Safari).
+           </figcaption>
+         </figure>
+         <!--
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/OceanWave_StereoscopicShader.png" alt="Ocean Wave Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         -->
+         <p>&nbsp;</p>
+         
+         <h2 class="fw-bold">
+             Terrain Sculpt
+         </h2>
+         <p>
+         The Terrain Sculpt shader creates beautiful, stylized 3D landscapes using procedural generation. It mathematically sculpts terrain using noise, patterns, and shapes. Different terrain styles like hills, spines, caverns, and slopes can be selected and blended together. The shader simulates how light interacts with the ground, including shadows, highlights, reflections, and ambient color, giving the scene depth and realism. A special "warp" effect can animate the terrain, making it ripple and flow over time. Camera position, lighting, and perspective are fully adjustable, allowing creative control over the final look. The result is a responsive, immersive terrain that feels both natural and artistic.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/TerrianSculpt_StereoscopicShader.png" alt="Terrian Sculpt Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Cosmic Pulse Spiral
+         </h2>
+         <p>
+         Cosmic Pulse Spiral unfolds a mesmerizing dance of spiraling light and color that pulses rhythmically through an infinite cosmic expanse. Rays travel through layered, rotating 3D cylinders and slabs, warped and mirrored in a hypnotic swirl, generating waves of glowing energy that ripple outward in sync with the beat. This shader crafts a dynamic, translucent spiral structure with vibrant hues cycling in smooth sine wave patterns, evoking the sensation of traveling through a pulsating vortex of stellar energy. The effect feels both otherworldly and immersive, as if drifting inside a spiraling cosmic nebula alive with rhythmic light pulses.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/CosmicPulse_StereoscopicShader.png" alt="Cosmic Pulse Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Aetheric Flame
+         </h2>
+         <p>
+         Aetheric Flame conjures a mesmerizing, twisting vortex of radiant energy that flickers and dances like an otherworldly fire. Through intricate raymarching and fractal turbulence, the flame’s core pulses with vibrant hues shaped by sine waves, while its ethereal tendrils ripple and warp in a hypnotic spiral. The effect is a shimmering, semi-translucent blaze of light and color, where sinuous waves ripple through the depths of a glowing, twisting flame, evoking a sense of mystical energy captured in motion. This shader creates a vivid, dynamic flame that feels alive, suspended in a surreal, spatial dance of heat and light.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/AethericFlame_StereoscopicShader.png" alt="Aetheric Flame Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Spiral Cube Vortex
+         </h2>
+         <p>
+         Spiral Cube Vortex plunges you into a hypnotic 4D kaleidoscope where glowing cubes endlessly spiral and fold through space and time. Rays journey through an infinite, rotating lattice of softly rounded cubes—each one morphing smoothly as they twist in spiraling motions, folding over themselves in fractal-like repetition. Pulsing with rhythmic beats, this vortex radiates waves of vibrant colors, creating a surreal tunnel of luminescent geometry that feels both futuristic and dreamlike. The subtle rotations in multiple planes and the glowing edges evoke a mesmerizing dance of light and form, drawing you deeper into a spiraling cosmic cube maze.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/SpiralCubeVortex_StereoscopicShader.png" alt="Spiral Cube Vortex Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Stereo String Spiral
+         </h2>
+         <p>
+         Stereo String Spiral weaves you into an ethereal labyrinth of glowing fractal threads spiraling endlessly through warped space. Each delicate “string” folds and twists with hypnotic elegance, forming a mesmerizing lattice of interlaced loops that shimmer with radiant, pulsating colors. This dynamic fractal spiral ripples and glows as if alive, responding fluidly to rhythmic beats, its strands twisting in a complex dance governed by multidimensional transformations and space-folding inversions. The effect is a cosmic string theory visual — a transcendent, stringy tapestry glowing with vibrant energy that pulls you deeper into a fractal vortex of light and motion.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/StereoStringSpiral_SpatialShader.png" alt="Stereo String Spiral Spatial Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Spatial Tunnelwisp Gyroid
+         </h2>
+         <p>
+         Spatial Tunnelwisp Gyroid immerses you in a mesmerizing, otherworldly tunnel formed by the intricate, periodic lattice of a gyroid surface. This endless labyrinth pulses with subtle, rhythmic light pulses synced to an underlying beat, creating a shimmering “tunnelwisp” effect. The walls twist and spiral as if alive, with a delicate translucency that hints at layers folding within layers. The scene is dynamically warped in depth and perspective, enhanced by a clever interplay of reflection and rotation that distorts the tunnel’s geometry into a swirling, breathing maze. The glowing surfaces shift colors softly in waves of cosine patterns, with highlights brightening where the viewer’s gaze lingers. A finely tuned mix of layered gyroid fields at multiple scales adds rich fractal detail to the structure’s undulating surfaces. Time flows through the tunnel as a sine-driven glow ebbs and surges, creating an entrancing rhythmic pulse that beckons the observer to travel deeper into this spatial vortex — a radiant, twisting passage that blends geometry, light, and time into a hypnotic dance.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/SpatialTunnelwispGyroid_StereoShader.png" alt="Spatial Tunnelwisp Gyroid Stereo Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Canyon Light
+         </h2>
+         <p>
+         Canyon Light invites you on a radiant journey deep into a vast, sculpted canyon carved from rolling waves of light and shadow. This shader renders an expansive mountainous landscape shaped by fractal sine waves, where rugged canyon walls twist and undulate with organic complexity.
+         </p>
+         <p>
+         As the camera moves forward through this luminous terrain, valleys glow softly with a river of cyan and yellow light, casting ethereal reflections that shimmer and pulse with subtle rhythmic beats. The canyon walls are bathed in shifting hues — warm purples and reds on the outer cliffs, cool blues and electric tones deep inside — their colors modulated by intricate sine patterns that mimic natural rock textures and flowing energy.
+         <p>
+         <p>
+         Distant horizons blur with a glowing cyan sky haze, blending seamlessly with the deep shadows and highlights of the canyon’s interior. Time flows gently forward here, animating the landscape with a smooth fractal dance that evokes the slow carving of stone by wind and water, yet glowing with an almost mystical light.
+         <p>
+         <p>
+         It’s a serene, immersive exploration of light’s passage through space — a glowing, breathing canyon alive with color and depth.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/CanyonLight_StereoscopicShader.png" alt="Canyon Light Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Alien Ridge
+         </h2>
+         <p>
+         Alien Ridge transports you to a strange, toxic alien world, where jagged mountains and shimmering lakes ripple with eerie, otherworldly colors. The landscape pulses with surreal fractal patterns, folding and mirroring like an alien kaleidoscope.
+         <p>
+         <p>
+         Sharp ridges rise and fall, tinted in muted greens and blues, their shapes shaped by layered waves of fractal noise that carve out mysterious peaks and valleys. Beneath these mountains, vivid bright green lakes glow softly, reflecting the strange alien light.
+         </p>
+         <p>
+         As time flows, the camera moves steadily forward, drifting over this uncanny terrain where sharp folds in the landscape create mirrored canyons and shimmering water bodies — a subtle dance of form and color. The world feels alive, an exotic mixture of jagged geometry and smooth organic shapes, all rendered without any external textures, purely from math and light.
+         </p>
+         <p>
+         The colors are desaturated yet alien, evoking a quiet, toxic beauty that invites exploration while hinting at the planet’s hidden dangers. This is a glimpse into an enigmatic ridge far from Earth, where the land itself seems both familiar and unsettling — a perfect fusion of fractal complexity and alien serenity.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7">
+           <video class="figure-img img-fluid rounded lift lift-lg" controls width="100%" height="100%" poster="spatialshader/AlienRidge_poster.jpg">
+             <source src="spatialshader/AlienRidge.mov" type="video/quicktime">
+             Your browser does not support the video tag.
+           </video>
+           <figcaption class="figure-caption text-center">
+             Tap on the Alien Ridge spatial video above and select 'View Spatial Video' (only works in Vision Pro Safari).
+           </figcaption>
+         </figure>
+         <!--
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/AlienRidge_StereoscopicShader.png" alt="Alien Ridge Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         -->
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Smoke Twist
+         </h2>
+         <p>
+         Smoke Twist conjures an entrancing vision of delicate, translucent planes twisting gracefully through space like ribbons of smoke caught in a gentle breeze. Each layer flows and curls with hypnotic motion, their edges glowing softly in an ever-shifting spectrum of radiant colors.
+         </p>
+         <p>
+         The effect is like watching smoky tendrils dance in slow motion — semi-transparent sheets of vapor folding and spiraling around an invisible axis, lit by shimmering bands of rainbow light that pulse with subtle rhythm. The planes overlap and weave, creating an ethereal, otherworldly tapestry suspended in the void.
+         </p>
+         <p>
+         This shader captures the fluidity and mystery of smoke or vapor, rendering it as a mesmerizing interplay of light, color, and motion — a twisted ballet of glowing smoke ribbons that twist and fold endlessly, inviting you to lose yourself in their elegant flow.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/SmokeTwist_StereoscopicShader.png" alt="Smoke Twist Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Pulse Wave
+         </h2>
+         <p>
+         Pulse Wave pulses with rhythmic energy, a vibrant symphony of waves rippling through a luminous 3D space. Rays march forward, weaving through twisting currents of oscillating light that ebb and flow in sync with an invisible heartbeat.
+         </p>
+         <p>
+         Each step along the ray reveals shifting turbulences — sinuous distortions swirling and folding like electric currents or shimmering plasma streams. Colors flare and fade in a glowing dance of sinusoids, casting radiant pulses that ripple outward with mesmerizing cadence.
+         </p>
+         <p>
+         This shader feels like diving into a flowing river of vibrant energy pulses, where waves collide and intermingle in harmonious chaos. Light bends and folds across the scene, creating a living canvas of oscillating hues that glow with hypnotic intensity.
+         </p>
+         <p>
+         Pulse Wave is the visual embodiment of rhythm and motion, where light and color surge forward in relentless waves — a hypnotic flow of dynamic energy sculpted by time itself.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/PulseWave_StereoscopicShader.png" alt="Pulse Wave Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+         <h2 class="fw-bold">
+             Vivid Turbulence
+         </h2>
+         <p>
+         Vivid Turbulence unleashes a dynamic maelstrom of flowing colors and shifting patterns that pulse with chaotic energy. Rays dive through a restless 3D space, tracing turbulent currents that twist and fold in intricate, swirling motions
+         </p>
+         <p>
+         Each step marches deeper into a kaleidoscope of oscillating sine waves and hyperbolic tangents — currents of light bending and folding over themselves like waves caught in a storm. The scene vibrates with raw, electric intensity, colors folding and blending with fluid motion.
+         </p>
+         <p>
+         This shader evokes the essence of turbulent fluids and energetic flows, where radiant hues surge and collide in dazzling bursts of light. The undulating waves ripple forward with rhythmic momentum, guided by the invisible beats of time.
+         </p>
+         <p>
+         Vivid Turbulence captures the primal beauty of chaotic motion, transforming light and color into a living, breathing tempest of visual energy.
+         </p>
+         <p>&nbsp;</p>
+
+         <figure class="figure mb-7 text-center">
+             <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/VividTurbulence_StereoscopicShader.png" alt=" Vivid Turbulence Stereoscopic Shader" width="80%" height="80%">
+             <p>
+         </figure>
+         <p>&nbsp;</p>
+          <h2 class="fw-bold">
+              Mandelbulb Voyage
+          </h2>
+          
+          <p>
+          Mandelbulb Voyage is a real-time spatial stereoscopic shader that takes you on an animated journey deep within the mesmerizing 3D fractal structure known as the Mandelbulb. It uses ray marching, animated rotations, and refraction techniques to simulate light interaction inside a complex, shifting volumetric space. Beat-synchronized visuals and atmospheric effects enhance the immersive experience, generating glowing, color-rich environments that evolve with time. The shader renders warped fractal geometries with dynamic lighting and customizable camera parameters, offering a vivid stereoscopic voyage through a surreal and mathematically intricate world.
+          </p>
+          <p>&nbsp;</p>
+
+          <figure class="figure mb-7 text-center">
+              <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/spatialmandelbulb.png" alt="Spatial Mandelbulb Shader" width="80%" height="80%">
+              <p>
+          </figure>
+          <p>&nbsp;</p>
+
+          <h2 class="fw-bold">
+              Red vs Blue Gyroid
+          </h2>
+          <p>
+          Red vs Blue Gyroid is a stereoscopic ray-marched shader that visualizes a dynamic volumetric gyroid structure using layered procedural noise. The core of the shader is a signed distance function that blends multiple gyroid fields to produce complex, morphing forms. Colors transition between red and blue tones based on structural depth, lighting, and surface orientation. Real-time illumination includes directional lighting, surface reflections, and soft shadow simulation. Normals are refined with edge correction techniques to enhance visual clarity. The scene features animated movement, dynamic camera positioning, and a high-dynamic-range output with soft spatial anti-aliasing.
+          </p>
+          <p>&nbsp;</p>
+
+          <figure class="figure mb-7 text-center">
+              <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/bluevsredgyroid.png" alt="Blue vs Red Gyroid Shader" width="80%" height="80%">
+              <p>
+          </figure>
+          <p>&nbsp;</p>
+          
+          <h2 class="fw-bold">
+              Apollonian Glow
+          </h2>
+          
+          <p>
+          Apollonian Glow is a dynamic fractal shader that visualizes a volumetric structure inspired by recursive geometric inversion and modular symmetry. The core rendering technique uses raymarching to explore a procedurally folded space, repeatedly applying mirrored transformations, rotations, and spherical inversions. This generates intricate, glowing formations reminiscent of 3D Apollonian gaskets.
+          </p>
+          <p>
+          Color is driven by logarithmic scaling of the geometric detail, producing smooth gradients and prismatic shifts through the fractal. An internal glow accumulates along the ray path, modulated by distance and iteration count, resulting in a luminous, organic feel. Beat-synchronized time modulation enables rhythm-aware animations, while multisample antialiasing ensures visual clarity. A soft tonal adjustment and gamma correction are applied in the final output.
+          </p>
+          <p>&nbsp;</p>
+
+          <figure class="figure mb-7 text-center">
+              <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/GnarlyColorfulApollonian.png" alt="Gnarly Colorful Apollonian Shader" width="80%" height="80%">
+              <p>
+          </figure>
+          <p>&nbsp;</p>
+  
+          <h2 class="fw-bold">
+              Cloudy Crystal Marble Glow
+          </h2>
+          <p>
+          Cloudy Crystal Marble Glow is a volumetric ray-marched shader that simulates the appearance of a translucent crystalline sphere with intricate internal marble patterns. The shader combines procedural fractal noise and advanced ray-object intersection techniques to create soft, glowing structures within a transparent medium. Light is scattered and refracted through a fourth-order sphere surface, with dynamic lighting and fake soft shadows enhancing depth and realism. The visual effect includes a refractive surface layer, internal glow, and subtle surface reflections, all animated over time with optional beat-synchronized timing. A post-processing pass applies tone shaping, gamma correction, and mild vignette-style falloff for added depth. Anti-aliasing is achieved via a multi-sample jittered accumulation pass.
+
+          </p>
+          <p>&nbsp;</p>
+
+          <figure class="figure mb-7 text-center">
+              <img class="figure-img img-fluid rounded lift lift-lg" src="spatialshader/cloudycrystal.png" alt="Cloudy Crystal Shader" width="80%" height="80%">
+              <p>
+          </figure>
+          <p>&nbsp;</p>
+          <p>
+          <div class="container text-white">
+              <div class="row justify-content-left">
+                  <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+          <a href="spatialshader.html"><h3 class="fw-bold">
+              Back to Spatial Shader
+              </h3>
+            </a>
+          </p>
+          </div>
+          </div>
+            </div>
+
+
+   
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+    
+
+    <!--
+    <section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
+    <section class="bg-gradient-dark-black py-8 py-md-11">
+      <div class="container">
+    <section class="pt-6 pt-md-8">
+    -->
+
+    <!--
+    <section class="pt-6 pt-md-8">
+    -->
+
+    <!-- BORDER -->
+    <div class="bg-black">
+      <div class="container border-top border-gray-900-50"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-8 py-md-11 bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+    
+        <!--
+            <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
+    
+
+            <p class="text-gray-700 mb-2">
+              A better way to build.
+            </p>
+        -->
+            <!--
+            <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
+                </a>
+              </li>
+            </ul>
+        -->
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    
+ 
+    
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    
+  
+    
+          </div>
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+    
+    
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+    <!--
+      
+            <h6 class="fw-bold text-uppercase text-gray-700">
+              Legal
+            </h6>
+    
+       
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+            </ul>
+    -->
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+  </body>
+</html>
